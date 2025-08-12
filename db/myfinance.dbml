@@ -1,0 +1,71 @@
+Table usuario {
+    id_usuario bigint [primary key, increment]
+    email varchar [not null]
+    login varchar [not null]
+    senha varchar(10) [not null]
+    nivel varchar [not null, default: 'admin']
+    criado_em timestamptz [not null, default: 'now()']
+
+    indexes {
+        (email, login) [unique]
+    }
+}
+
+Table categoria_despesa {
+    id_categoria_despesa bigint [primary key, increment]
+    nome varchar [not null]
+    id_usuario bigint [not null]
+    criado_em timestamptz [not null, default: 'now()']
+
+    indexes {
+        (nome, id_usuario) [unique]
+    }
+}
+
+Ref: categoria_despesa.id_usuario > usuario.id_usuario
+
+Table categoria_receita {
+    id_categoria_receita bigint [primary key, increment]
+    nome varchar [not null]
+    id_usuario bigint [not null]
+    criado_em timestamptz [not null, default: 'now()']
+
+    indexes {
+        (nome, id_usuario) [unique]
+    }
+}
+
+Ref: categoria_receita.id_usuario > usuario.id_usuario
+
+Table competencia {
+    id_competencia bigint [primary key, increment]
+    mes integer [not null]
+    exercicio integer [not null]
+    id_usuario bigint [not null]
+    criado_em timestamptz [not null, default: 'now()']
+
+    indexes {
+        (mes, exercicio, id_usuario) [unique]
+    }
+}
+
+Ref: competencia.id_usuario > usuario.id_usuario
+
+Table tipo_carteira {
+    id_tipo_carteira bigint [primary key, increment]
+    nome varchar [not  null]
+    criado_em timestamptz [not null, default:'now()']
+}
+
+Table carteira {
+    id_carteira bigint [primary key, increment]
+    nome varchar [not null]
+    id_tipo_carteira bigint [not null]
+    saldo_inicial real [not null, default: 0.0]
+    saldo_atual real [not null, default: 0.0]
+    id_usuario bigint [not null]
+    criado_em timestamptz [not null, default: 'now()']
+}
+
+Ref: carteira.id_tipo_carteira > tipo_carteira.id_tipo_carteira
+Ref: carteira.id_usuario > usuario.id_usuario
