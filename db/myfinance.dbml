@@ -69,3 +69,14 @@ Table carteira {
 
 Ref: carteira.id_tipo_carteira > tipo_carteira.id_tipo_carteira
 Ref: carteira.id_usuario > usuario.id_usuario
+
+Table cartao_credito {
+    id_cartao_credito bigint [primary key, increment]
+    nome varchar [not null]
+    limite_total real [not null, default: 0]
+    limete_atual real [not null, default: 0]
+    id_usuario bigint [not null]
+    criado_em timestamptz [not null, default: 'now()']
+}
+
+Ref: cartao_credito.id_usuario > usuario.id_usuario
