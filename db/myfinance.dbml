@@ -80,3 +80,15 @@ Table cartao_credito {
 }
 
 Ref: cartao_credito.id_usuario > usuario.id_usuario
+
+Table fatura_cartao_credito {
+    id_fatura_carta_credito bigint [primary key, increment]
+    id_cartao_credito bigint [not null]
+    id_competencia bigint [not null]
+    id_usuario bigint [not null]
+    criado_em timestamptz [not null, default: 'now()']
+}
+
+Ref: fatura_cartao_credito.id_cartao_credito > cartao_credito.id_cartao_credito
+Ref: fatura_cartao_credito.id_competencia > competencia.id_competencia
+Ref: fatura_cartao_credito.id_usuario > usuario.id_usuario
