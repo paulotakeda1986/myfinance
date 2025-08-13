@@ -52,6 +52,13 @@ Table competencia {
 
 Ref: competencia.id_usuario > usuario.id_usuario
 
+Table banco {
+    id_banco bigint [primary key, increment]
+    nome varchar [not null]
+    codigo_banco varchar [not null, default: '']
+    criado_em timestamptz [not null, default: 'now()']
+}
+
 Table tipo_carteira {
     id_tipo_carteira bigint [primary key, increment]
     nome varchar [not  null]
@@ -60,6 +67,7 @@ Table tipo_carteira {
 
 Table carteira {
     id_carteira bigint [primary key, increment]
+    id_banco bigint [null]
     nome varchar [not null]
     id_tipo_carteira bigint [not null]
     saldo_inicial real [not null, default: 0.0]
@@ -70,13 +78,7 @@ Table carteira {
 
 Ref: carteira.id_tipo_carteira > tipo_carteira.id_tipo_carteira
 Ref: carteira.id_usuario > usuario.id_usuario
-
-Table banco {
-    id_banco bigint [primary key, increment]
-    nome varchar [not null]
-    codigo_banco varchar [not null, default: '']
-    criado_em timestamptz [not null, default: 'now()']
-}
+Ref: carteira.id_banco > banco.id_banco
 
 Table cartao_credito {
     id_cartao_credito bigint [primary key, increment]
