@@ -70,8 +70,16 @@ Table carteira {
 Ref: carteira.id_tipo_carteira > tipo_carteira.id_tipo_carteira
 Ref: carteira.id_usuario > usuario.id_usuario
 
+Table banco {
+    id_banco bigint [primary key, increment]
+    nome varchar [not null]
+    codigo_banco varchar [not null, default: '']
+    criado_em timestamptz [not null, default: 'now()']
+}
+
 Table cartao_credito {
     id_cartao_credito bigint [primary key, increment]
+    id_banco bigint [null]
     nome varchar [not null]
     limite_total real [not null, default: 0]
     limete_atual real [not null, default: 0]
@@ -80,6 +88,7 @@ Table cartao_credito {
 }
 
 Ref: cartao_credito.id_usuario > usuario.id_usuario
+Ref: cartao_credito.id_banco > banco.id_banco
 
 Table fatura_cartao_credito {
     id_fatura_carta_credito bigint [primary key, increment]
