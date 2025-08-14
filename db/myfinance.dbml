@@ -85,7 +85,7 @@ Table cartao_credito {
     id_banco bigint [null]
     nome varchar [not null]
     limite_total real [not null, default: 0]
-    limete_atual real [not null, default: 0]
+    limite_atual real [not null, default: 0]
     id_usuario bigint [not null]
     criado_em timestamptz [not null, default: 'now()']
 }
@@ -94,9 +94,10 @@ Ref: cartao_credito.id_usuario > usuario.id_usuario
 Ref: cartao_credito.id_banco > banco.id_banco
 
 Table fatura_cartao_credito {
-    id_fatura_carta_credito bigint [primary key, increment]
+    id_fatura_cartao_credito bigint [primary key, increment]
     id_cartao_credito bigint [not null]
     id_competencia bigint [not null]
+    valor_fatura_cartao_credito real [not null, default: '0']
     id_usuario bigint [not null]
     criado_em timestamptz [not null, default: 'now()']
 }
@@ -104,3 +105,57 @@ Table fatura_cartao_credito {
 Ref: fatura_cartao_credito.id_cartao_credito > cartao_credito.id_cartao_credito
 Ref: fatura_cartao_credito.id_competencia > competencia.id_competencia
 Ref: fatura_cartao_credito.id_usuario > usuario.id_usuario
+
+Table tipo_transferencia_financeira {
+    id_tipo_transferencia_financeira bigint [primary key, increment]
+    nome varchar [not null]
+    criado_em timestamptz [not null, default: 'now()']
+}
+
+Table transferencia_financeira {
+    id_transferencia_financeira bigint [primary key, increment]
+    id_tipo_transferencia_financeira bigint [not null]
+    data_transferencia date [not null, default: 'now()']
+    descricao_transferencia varchar [not null, default: '']
+    id_carteira_origem bigint [null]
+    id_carteira_destino bigint [null]
+    id_usuario bigint [not null]
+    criado_em timestamptz [not null, default: 'now()']
+}
+
+Ref: transferencia_financeira.id_tipo_transferencia_financeira > tipo_transferencia_financeira.id_tipo_transferencia_financeira
+Ref: transferencia_financeira.id_carteira_origem > carteira.id_carteira
+Ref: transferencia_financeira.id_carteira_destino > carteira.id_carteira
+Ref: transferencia_financeira.id_usuario > usuario.id_usuario
+
+Table tipo_lancamento_financeiro {
+    id_tipo_lancamento_financeiro bigint [primary key, increment]
+    nome varchar [not null]
+    criado_em timestamptz [not null, default: 'now()']
+}
+
+Table lancamento_financeiro {
+    id_lancamento_financeiro bigint [primary key, increment]
+    id_usuario bigint [not null]
+    data_lancamento_financeiro date [not null, default: 'now()']
+    id_tipo_lancamento_financeiro bigint [not null]
+    id_fatura_cartao_credito bigint [null]
+    id_carteira bigint [null]
+    id_categoria_receita bigint [null]
+    id_categoria_despesa bigint [null]
+    id_transferencia_financeira bigint [null]
+    fl_parcelado boolean [not null, default: false]
+    numero_parcela int [null]
+    total_parcelas int [null]
+    fl_fixo boolean [not null, default: false]
+    fl_efetivada boolean [not null, default: false]
+    criado_em timestamptz [not null, default: 'now()']
+}
+
+Ref: lancamento_financeiro.id_usuario > usuario.id_usuario
+Ref: lancamento_financeiro.id_tipo_lancamento_financeiro > tipo_lancamento_financeiro.id_tipo_lancamento_financeiro
+Ref: lancamento_financeiro.id_fatura_cartao_credito > fatura_cartao_credito.id_fatura_cartao_credito
+Ref: lancamento_financeiro.id_carteira > carteira.id_carteira
+Ref: lancamento_financeiro.id_categoria_receita > categoria_receita.id_categoria_receita
+Ref: lancamento_financeiro.id_categoria_despesa > categoria_despesa.id_categoria_despesa
+Ref: lancamento_financeiro.id_transferencia_financeira > transferencia_financeira.id_transferencia_financeira

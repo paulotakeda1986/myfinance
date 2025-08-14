@@ -1,4 +1,3 @@
-INSERT INTO usuario(email, login, senha) VALUES ('paulo.takeda@gmail.com', 'ptakeda', '123456');
 
 INSERT INTO banco(nome, codigo_banco) VALUES ('ACCESSCREDITO LTDA', '0');
 INSERT INTO banco(nome, codigo_banco) VALUES ('ACREDITA SERVI?OS DE CONSULTORIA EMPRESARIAL E DE COBRAN?A', '0');
