@@ -4,13 +4,13 @@ INSERT INTO tipo_carteira(id_tipo_carteira, nome) VALUES (1, 'Caixa');
 INSERT INTO tipo_carteira(id_tipo_carteira, nome) VALUES (2, 'Conta Corrente');
 INSERT INTO tipo_carteira(id_tipo_carteira, nome) VALUES (3, 'Conta Poupança');
 
-INSERT INTO carteira(id_banco, nome, id_tipo_carteira, saldo_inicial, id_usuario) VALUES (NULL, 'Caixa', 1, 0, 1);
-INSERT INTO carteira(id_banco, nome, id_tipo_carteira, saldo_inicial, id_usuario) VALUES (57, 'Banco do Brasil - CC', 2, 0, 1);
-INSERT INTO carteira(id_banco, nome, id_tipo_carteira, saldo_inicial, id_usuario) VALUES (57, 'Banco do Brasil - CP', 3, 0, 1);
-INSERT INTO carteira(id_banco, nome, id_tipo_carteira, saldo_inicial, id_usuario) VALUES (141, 'Caixa Econômica - CC', 2, 0, 1);
-INSERT INTO carteira(id_banco, nome, id_tipo_carteira, saldo_inicial, id_usuario) VALUES (1400, 'NUBANK - CC', 2, 270.54, 1);
-INSERT INTO carteira(id_banco, nome, id_tipo_carteira, saldo_inicial, id_usuario) VALUES (NULL, 'Flash (Vale Alimentação)', 1, 0, 1);
-INSERT INTO carteira(id_banco, nome, id_tipo_carteira, saldo_inicial, id_usuario) VALUES (NULL, 'SINTINORP (DUCZ)', 1, 8.93, 1);
+INSERT INTO carteira(id_banco, nome, id_tipo_carteira, saldo_inicial, saldo_atual, id_usuario) VALUES (NULL, 'Caixa', 1, 0, 0, 1);
+INSERT INTO carteira(id_banco, nome, id_tipo_carteira, saldo_inicial, saldo_atual, id_usuario) VALUES (57, 'Banco do Brasil - CC', 2, 0, 0, 1);
+INSERT INTO carteira(id_banco, nome, id_tipo_carteira, saldo_inicial, saldo_atual, id_usuario) VALUES (57, 'Banco do Brasil - CP', 3, 0, 0, 1);
+INSERT INTO carteira(id_banco, nome, id_tipo_carteira, saldo_inicial, saldo_atual, id_usuario) VALUES (141, 'Caixa Econômica - CC', 2, 0, 0, 1);
+INSERT INTO carteira(id_banco, nome, id_tipo_carteira, saldo_inicial, saldo_atual, id_usuario) VALUES (1400, 'NUBANK - CC', 2, 270.54, 270.54, 1);
+INSERT INTO carteira(id_banco, nome, id_tipo_carteira, saldo_inicial, saldo_atual, id_usuario) VALUES (NULL, 'Flash (Vale Alimentação)', 1, 0, 0, 1);
+INSERT INTO carteira(id_banco, nome, id_tipo_carteira, saldo_inicial, saldo_atual, id_usuario) VALUES (NULL, 'SINTINORP (DUCZ)', 1, 8.93, 8.93, 1);
 
 INSERT INTO cartao_credito(id_cartao_credito, id_banco, nome, limite_total, limite_atual, id_usuario) VALUES (1, 57, 'Banco do Brasil', 28612, 28612, 1);
 INSERT INTO cartao_credito(id_cartao_credito, id_banco, nome, limite_total, limite_atual, id_usuario) VALUES (2, 57, 'NUBANK', 10450, 10450, 1);
