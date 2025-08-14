@@ -8,7 +8,7 @@ INSERT INTO carteira(id_banco, nome, id_tipo_carteira, saldo_inicial, id_usuario
 INSERT INTO carteira(id_banco, nome, id_tipo_carteira, saldo_inicial, id_usuario) VALUES (57, 'Banco do Brasil - CC', 2, 0, 1);
 INSERT INTO carteira(id_banco, nome, id_tipo_carteira, saldo_inicial, id_usuario) VALUES (57, 'Banco do Brasil - CP', 3, 0, 1);
 INSERT INTO carteira(id_banco, nome, id_tipo_carteira, saldo_inicial, id_usuario) VALUES (141, 'Caixa Econômica - CC', 2, 0, 1);
-INSERT INTO carteira(id_banco, nome, id_tipo_carteira, saldo_inicial, id_usuario) VALUES (1400, 'NUBANK - CC', 2, 0, 1);
+INSERT INTO carteira(id_banco, nome, id_tipo_carteira, saldo_inicial, id_usuario) VALUES (1400, 'NUBANK - CC', 2, 270.54, 1);
 INSERT INTO carteira(id_banco, nome, id_tipo_carteira, saldo_inicial, id_usuario) VALUES (NULL, 'Flash (Vale Alimentação)', 1, 0, 1);
 INSERT INTO carteira(id_banco, nome, id_tipo_carteira, saldo_inicial, id_usuario) VALUES (NULL, 'SINTINORP (DUCZ)', 1, 8.93, 1);
 
