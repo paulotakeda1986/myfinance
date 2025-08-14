@@ -62,3 +62,5 @@ INSERT INTO competencia(id_competencia, mes, exercicio, id_usuario) VALUES (33, 
 INSERT INTO competencia(id_competencia, mes, exercicio, id_usuario) VALUES (34, 10, 2027, 1);
 INSERT INTO competencia(id_competencia, mes, exercicio, id_usuario) VALUES (35, 11, 2027, 1);
 INSERT INTO competencia(id_competencia, mes, exercicio, id_usuario) VALUES (36, 12, 2027, 1);
+
+INSERT INTO fatura_cartao_credito(id_cartao_credito, id_competencia, id_usuario) VALUES (1, 1, 1);
