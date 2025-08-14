@@ -150,6 +150,7 @@ Table lancamento_financeiro {
     id_categoria_receita bigint [null]
     id_categoria_despesa bigint [null]
     id_transferencia_financeira bigint [null]
+    valor_lancamento_financeiro real [not null, default: 0]
     fl_parcelado boolean [not null, default: false]
     numero_parcela int [null]
     total_parcelas int [null]
