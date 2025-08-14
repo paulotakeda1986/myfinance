@@ -15,6 +15,7 @@ Table usuario {
 Table categoria_despesa {
     id_categoria_despesa bigint [primary key, increment]
     nome varchar [not null]
+    fl_fixo boolean [not null, default: false]
     id_usuario bigint [not null]
     criado_em timestamptz [not null, default: 'now()']
 
@@ -28,6 +29,7 @@ Ref: categoria_despesa.id_usuario > usuario.id_usuario
 Table categoria_receita {
     id_categoria_receita bigint [primary key, increment]
     nome varchar [not null]
+    fl_fixo boolean [not null, default: false]
     id_usuario bigint [not null]
     criado_em timestamptz [not null, default: 'now()']
 
