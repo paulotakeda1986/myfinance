@@ -1,3 +1,7 @@
+// =========================
+// TABELAS PRINCIPAIS
+// =========================
+
 Table usuario {
     id_usuario bigint [primary key, increment]
     email varchar [not null]
@@ -63,7 +67,7 @@ Table banco {
 
 Table tipo_carteira {
     id_tipo_carteira bigint [primary key, increment]
-    nome varchar [not  null]
+    nome varchar [not null]
     criado_em timestamptz [not null, default:'now()']
 }
 
@@ -72,8 +76,8 @@ Table carteira {
     id_banco bigint [null]
     nome varchar [not null]
     id_tipo_carteira bigint [not null]
-    saldo_inicial numeric(15,2) [not null, default: 0.0]
-    saldo_atual numeric(15,2) [not null, default: 0.0]
+    saldo_inicial numeric(15,2) [not null, default: 0.00]
+    saldo_atual numeric(15,2) [not null, default: 0.00]
     id_usuario bigint [not null]
     criado_em timestamptz [not null, default: 'now()']
 }
@@ -86,8 +90,8 @@ Table cartao_credito {
     id_cartao_credito bigint [primary key, increment]
     id_banco bigint [null]
     nome varchar [not null]
-    limite_total numeric(15,2) [not null, default: 0]
-    limite_atual numeric(15,2) [not null, default: 0]
+    limite_total numeric(15,2) [not null, default: 0.00]
+    limite_atual numeric(15,2) [not null, default: 0.00]
     fl_cartao_credito_ativo boolean [not null, default: true]
     id_usuario bigint [not null]
     criado_em timestamptz [not null, default: 'now()']
@@ -100,7 +104,7 @@ Table fatura_cartao_credito {
     id_fatura_cartao_credito bigint [primary key, increment]
     id_cartao_credito bigint [not null]
     id_competencia bigint [not null]
-    valor_fatura_cartao_credito numeric(15,2) [not null, default: '0']
+    valor_fatura_cartao_credito numeric(15,2) [not null, default: 0.00]
     fl_fatura_cartao_credito_fechada boolean [not null, default: false]
     data_fechamento_fatura_cartao_credito date [null]
     id_usuario bigint [not null]
@@ -144,13 +148,13 @@ Table lancamento_financeiro {
     id_usuario bigint [not null]
     data_lancamento_financeiro date [not null, default: 'now()']
     id_tipo_lancamento_financeiro bigint [not null]
-    id_competencia bigint [null]J
+    id_competencia bigint [null]
     id_fatura_cartao_credito bigint [null]
     id_carteira bigint [null]
     id_categoria_receita bigint [null]
     id_categoria_despesa bigint [null]
     id_transferencia_financeira bigint [null]
-    valor_lancamento_financeiro numeric(15,2) [not null, default: 0]
+    valor_lancamento_financeiro numeric(15,2) [not null, default: 0.00]
     fl_parcelado boolean [not null, default: false]
     numero_parcela int [null]
     total_parcelas int [null]
@@ -167,3 +171,119 @@ Ref: lancamento_financeiro.id_carteira > carteira.id_carteira
 Ref: lancamento_financeiro.id_categoria_receita > categoria_receita.id_categoria_receita
 Ref: lancamento_financeiro.id_categoria_despesa > categoria_despesa.id_categoria_despesa
 Ref: lancamento_financeiro.id_transferencia_financeira > transferencia_financeira.id_transferencia_financeira
+
+// =========================
+// NOVAS FUNCIONALIDADES
+// =========================
+
+Table meta_financeira {
+    id_meta_financeira bigint [primary key, increment]
+    id_usuario bigint [not null]
+    nome varchar [not null]
+    descricao varchar [null]
+    valor_meta numeric(15,2) [not null]
+    valor_atual numeric(15,2) [not null, default: 0.00]
+    data_inicio date [not null, default: 'now()']
+    data_fim date [null]
+    fl_atingida boolean [not null, default: false]
+    criado_em timestamptz [not null, default: 'now()']
+}
+
+Ref: meta_financeira.id_usuario > usuario.id_usuario
+
+Table parcela_lancamento {
+    id_parcela_lancamento bigint [primary key, increment]
+    id_lancamento_financeiro bigint [not null]
+    numero_parcela int [not null]
+    total_parcelas int [not null]
+    valor_parcela numeric(15,2) [not null]
+    data_vencimento date [not null]
+    fl_pago boolean [not null, default: false]
+    criado_em timestamptz [not null, default: 'now()']
+}
+
+Ref: parcela_lancamento.id_lancamento_financeiro > lancamento_financeiro.id_lancamento_financeiro
+
+Table investimento {
+    id_investimento bigint [primary key, increment]
+    id_usuario bigint [not null]
+    nome varchar [not null]
+    tipo varchar [not null]   // Ex: CDB, Tesouro, Ações, Fundo
+    valor_inicial numeric(15,2) [not null]
+    valor_atual numeric(15,2) [not null]
+    data_inicio date [not null, default: 'now()']
+    data_resgate date [null]
+    rendimento_percentual numeric(5,2) [null]
+    criado_em timestamptz [not null, default: 'now()']
+}
+
+Ref: investimento.id_usuario > usuario.id_usuario
+
+Table alerta_financeiro {
+    id_alerta_financeiro bigint [primary key, increment]
+    id_usuario bigint [not null]
+    tipo_alerta varchar [not null] // Ex: fatura, meta, vencimento
+    mensagem varchar [not null]
+    data_alerta timestamptz [not null, default: 'now()']
+    fl_lido boolean [not null, default: false]
+}
+
+Ref: alerta_financeiro.id_usuario > usuario.id_usuario
+
+// =========================
+// AUDITORIA / LOGS
+// =========================
+
+Table auditoria {
+    id_auditoria bigint [primary key, increment]
+    tabela varchar [not null]
+    id_registro bigint [not null]
+    acao varchar [not null]                  // Ex: INSERT, UPDATE, DELETE
+    id_usuario bigint [null]
+    data_auditoria timestamptz [not null, default: 'now()']
+    dados_antigos jsonb [null]
+    dados_novos jsonb [null]
+    descricao varchar [null]
+}
+
+Ref: auditoria.id_usuario > usuario.id_usuario
+
+Table historico_carteira {
+    id_historico_carteira bigint [primary key, increment]
+    id_carteira bigint [not null]
+    saldo_inicial numeric(15,2) [not null]
+    saldo_atual numeric(15,2) [not null]
+    id_usuario bigint [null]
+    data_movimentacao timestamptz [not null, default: 'now()']
+    descricao varchar [null]
+}
+
+Ref: historico_carteira.id_carteira > carteira.id_carteira
+Ref: historico_carteira.id_usuario > usuario.id_usuario
+
+Table historico_lancamento_financeiro {
+    id_historico_lancamento bigint [primary key, increment]
+    id_lancamento_financeiro bigint [not null]
+    valor_lancamento numeric(15,2) [not null]
+    id_usuario bigint [null]
+    acao varchar [not null]                  // Ex: Criado, Atualizado, Deletado
+    data_movimentacao timestamptz [not null, default: 'now()']
+    descricao varchar [null]
+}
+
+Ref: historico_lancamento_financeiro.id_lancamento_financeiro > lancamento_financeiro.id_lancamento_financeiro
+Ref: historico_lancamento_financeiro.id_usuario > usuario.id_usuario
+
+Table historico_fatura_cartao {
+    id_historico_fatura bigint [primary key, increment]
+    id_fatura_cartao_credito bigint [not null]
+    valor_fatura numeric(15,2) [not null]
+    fl_fatura_fechada boolean [not null]
+    data_fechamento date [null]
+    id_usuario bigint [null]
+    acao varchar [not null]                 // Ex: Criada, Atualizada, Fechada
+    data_movimentacao timestamptz [not null, default: 'now()']
+}
+
+Ref: historico_fatura_cartao.id_fatura_cartao_credito > fatura_cartao_credito.id_fatura_cartao_credito
+Ref: historico_fatura_cartao.id_usuario > usuario.id_usuario
