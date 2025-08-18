@@ -144,7 +144,7 @@ Table lancamento_financeiro {
     id_usuario bigint [not null]
     data_lancamento_financeiro date [not null, default: 'now()']
     id_tipo_lancamento_financeiro bigint [not null]
-    id_competencia bigint [null]
+    id_competencia bigint [null]J
     id_fatura_cartao_credito bigint [null]
     id_carteira bigint [null]
     id_categoria_receita bigint [null]
