@@ -1,0 +1,25 @@
+Data                Lançamento                         Detalhes                                          N° documento                  Valor                       Tipo Lançamento
+25/07/2025          Saldo Anterior                                                                                                     0,00                               
+05/08/2025          Ordem Bancária                     GOVERNO DO PARANA SECR                            202508040027611               23,97                       Entrada 
+05/08/2025          Pgto BB Crédito Salário            172422526-BB CRÉDITO SALÁRIO                      872171000424207               -31,89                      Saída  
+05/08/2025          BB Rende Fácil                     Rende Facil                                       9903                          7,92                        Entrada 
+00/00/0000          Saldo do dia                                                                                                       0,00                               
+06/08/2025          Proventos TED                      104 1631    02139132165 PAULO ROBERTO             33828132                      6.725,66                    Entrada 
+06/08/2025          Pgto BB Crédito Salário            172422526-BB CRÉDITO SALÁRIO                      872181000695703               -924,85                     Saída  
+06/08/2025          Tarifa Pacote de Serviços          Cobrança referente a        05/08/2025            862180801454449               -14,90                      Saída  
+06/08/2025          BB Rende Fácil                     Rende Facil                                       9903                          -5.785,91                   Saída  
+00/00/0000          Saldo do dia                                                                                                       0,00                               
+07/08/2025          Cashback CDC                       172422526-BB CRÉDITO SALÁRIO                      102191000055045               34,94                       Entrada 
+07/08/2025          BB Rende Fácil                     Rende Facil                                       9903                          -34,94                      Saída  
+00/00/0000          Saldo do dia                                                                                                       0,00                               
+08/08/2025          Transferido da poupança            08/08 19:48 PAULO ROBERTO S TAKEDA                832510030912                  1.300,00                    Entrada 
+08/08/2025          TED-Crédito em Conta               341 0735 15398879000149 LPS RAUL FULGE            33842414                      1.184,00                    Entrada 
+08/08/2025          Pagto cartão crédito                                                                 320083200180000               -8.143,66                   Saída  
+08/08/2025          Pix - Enviado                      08/08 01:04 Nicolas De Paula Beteti Le            80801                         -50,00                      Saída  
+08/08/2025          Pix - Enviado                      08/08 12:17 Leônidas Paulo Justiniano             80802                         -50,00                      Saída  
+08/08/2025          BB Rende Fácil                     Rende Facil                                       9903                          5.759,66                    Entrada 
+00/00/0000          Saldo do dia                                                                                                       0,00                               
+13/08/2025          Pgto CDC                           167119199-BB CRÉDITO AUTOMÁTICO                   872251000123903               -61,23                      Saída  
+13/08/2025          BB Rende Fácil                     Rende Facil                                       9903                          61,23                       Entrada 
+00/00/0000          Saldo do dia                                                                                                       0,00                               
+19/08/2025          S A L D O                                                                                                          0,00                               

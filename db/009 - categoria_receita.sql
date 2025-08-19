@@ -5,3 +5,5 @@ INSERT INTO categoria_receita (id_categoria_receita, nome, fl_fixo, id_usuario) 
 INSERT INTO categoria_receita (id_categoria_receita, nome, fl_fixo, id_usuario) VALUES (5 ,'Adiantamento de férias', false, 1);
 INSERT INTO categoria_receita (id_categoria_receita, nome, fl_fixo, id_usuario) VALUES (6 ,'Prestação de serviços', false, 1);
 INSERT INTO categoria_receita (id_categoria_receita, nome, fl_fixo, id_usuario) VALUES (7 ,'Rendimentos', false, 1);
+INSERT INTO categoria_receita (id_categoria_receita, nome, fl_fixo, id_usuario) VALUES (8 ,'Antecipação saque FGTS', false, 1);
+INSERT INTO categoria_receita (id_categoria_receita, nome, fl_fixo, id_usuario) VALUES (9 ,'Outros', false, 1);
