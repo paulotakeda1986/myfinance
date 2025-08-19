@@ -154,6 +154,7 @@ Table lancamento_financeiro {
     id_categoria_receita bigint [null]
     id_categoria_despesa bigint [null]
     id_transferencia_financeira bigint [null]
+    descricao varchar [not null, default: 'Lançamento financeiro']
     valor_lancamento_financeiro numeric(15,2) [not null, default: 0.00]
     fl_parcelado boolean [not null, default: false]
     numero_parcela int [null]
