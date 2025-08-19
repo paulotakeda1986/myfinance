@@ -1,0 +1,281 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                 SISBB - Sistema de Informações Banco do Brasil                 
+19/08/2025                       Auto-Atendimento                       17:19:53
+                           Fatura do Cartão de Crédito                          
+ 
+ 
+Cliente         : PAULO R S TAKEDA                 
+Nr.Cartão       : 4854.****.****.3580         
+Modalidade      : OUROCARD FACIL VISA              
+ 
+Vencimento      : 08.08.2025          
+Total da fatura : R$ 8.143,66       
+Pagamento mínimo: R$ 1.221,55       
+ 
+DEMONSTRATIVO
+--------------------------------------------------------------------------------
+Data     Transações                             País        Valor R$   Valor US$
+--------------------------------------------------------------------------------
+                                                     
+ 
+         1 - PAULO R S TAKEDA                        
+                                                     
+         SALDO FATURA ANTERIOR                  BR          7.193,36        0,00
+                                                     
+ 
+         Pagamentos/Créditos                         
+07.07.2025PGTO. CASH AG.    0832 000083200  200100           -7.193,36        0,00
+11.07.2025MERCADOPAGO*EBAZARCOMBROSASCO        BR             -257,58        0,00
+                                                     
+ 
+         Lazer                                       
+29.06.2025PAC D ZONA LESTE LTDA  LONDRINA      BR              129,90        0,00
+                                                     
+ 
+         Restaurantes                                
+25.06.2025CafeEProsa             LONDRINA      BR               10,00        0,00
+26.06.2025SR CHURRASCO           LONDRINA      BR               39,50        0,00
+27.06.2025IFD*PASTEL DO FERNANDO LONDRINA      BR               32,59        0,00
+30.06.2025BAR E RES INDUSVILLE   LONDRINA      BR               33,00        0,00
+03.07.202557.120.699 GABRIEL FELILONDRINA      BR               42,90        0,00
+04.07.2025BAR E RES INDUSVILLE   LONDRINA      BR                3,50        0,00
+05.07.2025TiagoRibeiroSilva      LONDRINA      BR              470,00        0,00
+05.07.202557.120.699 GABRIEL FELILONDRINA      BR               42,90        0,00
+06.07.2025CONVENIENCIA           Marialva      BR               39,90        0,00
+06.07.2025JcDocesE               MARINGA       BR              176,50        0,00
+06.07.2025BONDAM RESTAURANTE     MARINGA       BR               18,00        0,00
+05.07.2025IFD*PAZORIA SERVICE FOOLONDRINA      BR               33,79        0,00
+08.07.2025BAR E RES INDUSVILLE   LONDRINA      BR               10,00        0,00
+09.07.2025VAGasparotto           LONDRINA      BR               28,00        0,00
+11.07.2025PANDA SUSHI            IBIPORA       BR               37,16        0,00
+12.07.202557.120.699 GABRIEL FELILONDRINA      BR               59,80        0,00
+14.07.2025Danielescupinarid      LONDRINA      BR               25,00        0,00
+17.07.2025BarracaoDaCerveja      LONDRINA      BR               25,00        0,00
+17.07.2025IFD*SUSHI DELIVERY IBIPIBIPORA       BR               94,88        0,00
+20.07.2025PASTEL TAUA            LONDRINA      BR               42,00        0,00
+21.07.2025IFD*TSC CONVENIENCIA L LONDRINA      BR               72,90        0,00
+23.07.2025MANOLOS REFEICOES CASE LONDRINA      BR               39,00        0,00
+                                                     
+ 
+         Saúde                                       
+28.06.2025FARMACIA PIONEIROS LT  LONDRINA      BR               37,31        0,00
+                                                     
+ 
+         Serviços                                    
+25.06.2025MERCEARIA VENEZA       LONDRINA      BR               39,00        0,00
+26.06.2025POSTO INDUSVILLE       LONDRINA      BR              165,40        0,00
+27.06.2025MERCEARIA VENEZA       LONDRINA      BR               24,00        0,00
+27.06.2025POSTO INDUSVILLE       LONDRINA      BR              107,25        0,00
+28.06.2025PG *ZE DELIVERY ZE DEL SAO PAULO     BR               32,50        0,00
+28.06.2025AUTO POSTO BELGA       LONDRINA      BR               54,21        0,00
+28.06.2025POSTO INDUSVILLE       LONDRINA      BR               62,14        0,00
+29.06.202510 DE DEZEMBRO         LONDRINA      BR               34,95        0,00
+29.06.2025POSTO INDUSVILLE       LONDRINA      BR              108,50        0,00
+29.06.2025POSTO INDUSVILLE       LONDRINA      BR               15,00        0,00
+30.06.2025MERCADOPAGO*MANOLOSTABAOSASCO        BR               32,50        0,00
+29.06.2025IFD*PANIFICADORA E CON LONDRINA      BR               54,73        0,00
+01.07.202559372756Luciana        LONDRINA      BR               40,00        0,00
+01.07.2025POSTO INDUSVILLE       LONDRINA      BR               54,25        0,00
+02.07.2025GestoraDeAtivosAC      LONDRINA      BR               19,98        0,00
+03.07.2025PG *ZE DELIVERY ZE DEL SAO PAULO     BR               33,22        0,00
+02.07.2025PET GARLLI             LONDRINA      BR               24,74        0,00
+02.07.2025POSTO INDUSVILLE       LONDRINA      BR               80,75        0,00
+03.07.2025MERCADOPAGO*MARCELINHOSOSASCO        BR               39,00        0,00
+03.07.2025GestoraDeAtivosAC      LONDRINA      BR               64,91        0,00
+03.07.2025POSTO INDUSVILLE       LONDRINA      BR               18,00        0,00
+03.07.2025POSTO INDUSVILLE       LONDRINA      BR               51,75        0,00
+04.07.2025Paiva e Urbick comercioLondrina      BR               44,25        0,00
+04.07.2025POSTO INDUSVILLE       LONDRINA      BR                7,90        0,00
+05.07.2025COOPER ALCOOL COMERCIO LONDRINA      BR               89,50        0,00
+05.07.2025AUTO POSTO ALVORADA LO LONDRINA      BR               40,00        0,00
+05.07.2025AUTO POSTO BELGA       LONDRINA      BR               50,00        0,00
+05.07.2025MERCADOPAGO*MARCELINHOSOSASCO        BR               68,00        0,00
+05.07.2025AUTO POSTO BELGA       LONDRINA      BR               48,48        0,00
+06.07.2025GestoraDeAtivosAC      LONDRINA      BR               46,00        0,00
+07.07.2025MERCADOPAGO*MARCELINHOSOSASCO        BR               39,00        0,00
+06.07.2025IFD*IFOOD CLUB         Osasco        BR               12,90        0,00
+06.07.2025POSTO INDUSVILLE       LONDRINA      BR               80,75        0,00
+07.07.2025MERCADOPAGO*MANOLOSTABAOSASCO        BR               26,00        0,00
+06.07.2025IFD*PANIFICADORA E CON LONDRINA      BR               48,23        0,00
+08.07.2025POSTO INDUSVILLE       LONDRINA      BR               40,00        0,00
+09.07.2025ARCO LESTE CONVENI     LONDRINA      BR               24,00        0,00
+09.07.2025POSTO INDUSVILLE       LONDRINA      BR               85,00        0,00
+09.07.2025GLX    *FRANCOAFLIX    Londrina      BR               69,90        0,00
+10.07.2025Paiva e Urbick comercioLondrina      BR               95,75        0,00
+10.07.2025POSTO INDUSVILLE       LONDRINA      BR               46,00        0,00
+10.07.2025POSTO INDUSVILLE       LONDRINA      BR               45,00        0,00
+11.07.2025MERCADOPAGO*MARCELINHOSOSASCO        BR               19,50        0,00
+12.07.2025ARCO LESTE CONVENI     LONDRINA      BR               24,00        0,00
+12.07.2025POSTO INDUSVILLE       LONDRINA      BR               51,15        0,00
+12.07.2025IFD*PANIFICADORA E CON LONDRINA      BR               37,11        0,00
+12.07.2025EBN         *TEMU COM  CURITIBA      BR              242,81        0,00
+13.07.2025POSTO TALISMA          Londrina      BR               40,00        0,00
+13.07.2025POSTO TALISMA          Londrina      BR               26,00        0,00
+14.07.2025V8 KING CONVENIENCIA   LONDRINA      BR               24,00        0,00
+13.07.2025POSTO INDUSVILLE       LONDRINA      BR               54,00        0,00
+13.07.2025SUPER MUFFATO          CASCAVEL      BR               71,13        0,00
+15.07.2025POSTO INDUSVILLE       LONDRINA      BR               30,00        0,00
+15.07.2025PET GARLLI             LONDRINA      BR               31,18        0,00
+17.07.2025PG *ZE DELIVERY ZE DEL SAO PAULO     BR               42,81        0,00
+16.07.2025POSTO INDUSVILLE       LONDRINA      BR               10,50        0,00
+17.07.2025MERCADOPAGO*MARCELINHOSOSASCO        BR               39,00        0,00
+16.07.2025DM     *helphbomaxcom  New York      BR               19,95        0,00
+17.07.2025MERCADOPAGO*MARCELINHOSOSASCO        BR               26,00        0,00
+17.07.2025NETFLIX.COM            SAO PAULO     BR               59,90        0,00
+17.07.2025POSTO INDUSVILLE       LONDRINA      BR               40,00        0,00
+18.07.2025MERCADOPAGO*MANOLOSTABAOSASCO        BR               48,00        0,00
+20.07.2025PG *ZE DELIVERY ZE DEL SAO PAULO     BR               38,65        0,00
+19.07.2025COOPER ALCOOL COMERCIO LONDRINA      BR               78,00        0,00
+21.07.2025MERCADOPAGO*MANOLOSTABAOSASCO        BR               65,00        0,00
+20.07.2025POSTO INDUSVILLE       LONDRINA      BR               52,50        0,00
+20.07.2025AUTO POSTO MUFFATO     LONDRINA      BR               50,00        0,00
+20.07.2025SUPER MUFFATO          CASCAVEL      BR               10,09        0,00
+21.07.2025ARCO LESTE CONVENI     LONDRINA      BR               25,00        0,00
+21.07.2025PET GARLLI             LONDRINA      BR               69,91        0,00
+22.07.2025POSTO INDUSVILLE       LONDRINA      BR               65,00        0,00
+23.07.2025LAVO LONDRINA          LONDRINA      BR               36,00        0,00
+23.07.2025LAVO LONDRINA          LONDRINA      BR               18,00        0,00
+23.07.2025SUPER MUFFATO          CASCAVEL      BR               53,18        0,00
+23.07.2025AUTO POSTO MUFFATO LTD LONDRINA      BR               29,88        0,00
+24.07.2025Paiva e Urbick comercioLondrina      BR               97,50        0,00
+24.07.2025POSTO INDUSVILLE       LONDRINA      BR               17,50        0,00
+24.07.2025SUPER MUFFATO          CASCAVEL      BR               13,98        0,00
+                                                     
+ 
+         Supermercados                               
+25.06.2025SUPERMERCADO 88        LONDRINA      BR               55,70        0,00
+26.06.2025SUPERMERCADO 88        LONDRINA      BR               15,00        0,00
+30.06.2025SUPERMERCADO 88        LONDRINA      BR               76,24        0,00
+03.07.2025SUPERMERCADO 88        LONDRINA      BR               15,80        0,00
+04.07.2025SUPERMERCADO 88        LONDRINA      BR               13,09        0,00
+07.07.2025SUPERMERCADO 88        LONDRINA      BR               15,98        0,00
+07.07.2025SUPERMERCADO 88        LONDRINA      BR               59,66        0,00
+08.07.2025SUPERMERCADO 88        LONDRINA      BR               22,05        0,00
+08.07.2025SUPERMERCADO 88        LONDRINA      BR                5,00        0,00
+09.07.2025SUPERMERCADO 88        LONDRINA      BR               26,31        0,00
+10.07.2025SUPERMERCADO 88        LONDRINA      BR               14,50        0,00
+11.07.2025SUPERMERCADO 88        LONDRINA      BR               13,99        0,00
+11.07.2025SUPERMERCADO 88        LONDRINA      BR               25,52        0,00
+14.07.2025SUPERMERCADO 88        LONDRINA      BR               44,73        0,00
+16.07.2025SUPERMERCADO 88        LONDRINA      BR               54,30        0,00
+16.07.2025SUPERMERCADO 88        LONDRINA      BR               13,99        0,00
+17.07.2025SUPERMERCADO 88        LONDRINA      BR               36,10        0,00
+20.07.2025SUPERMERCADO MUFFATO   LONDRINA      BR               32,88        0,00
+22.07.2025SUPERMERCADO 88        LONDRINA      BR               32,73        0,00
+22.07.2025SUPERMERCADO 88        LONDRINA      BR                7,50        0,00
+23.07.2025SUPERMERCADO 88        LONDRINA      BR               29,68        0,00
+                                                     
+ 
+         Vestuário                                   
+23.07.2025LOJAS RENNER FL 267    LONDRINA      BR               49,90        0,00
+                                                     
+ 
+         Outros lançamentos                          
+28.06.2025Amazon Prime Canais    SAO PAULO     BR               14,90        0,00
+30.06.2025DL *GOOGLE Kilobyte    SAO PAULO     BR               23,99        0,00
+06.07.2025AmazonPrimeBR          SAO PAULO     BR               19,90        0,00
+10.07.2025Amazon Prime Canais    SAO PAULO     BR               16,90        0,00
+10.07.2025Amazon Prime Canais    SAO PAULO     BR               29,90        0,00
+11.07.2025Amazon Prime Canais    SAO PAULO     BR               14,90        0,00
+13.07.2025Amazon Prime Canais    SAO PAULO     BR               13,95        0,00
+12.07.2025DL     *GOOGLE Tinder  SAO PAULO     BR               35,99        0,00
+14.07.2025DL*GOOGLE Crunch       SAO PAULO     BR               14,99        0,00
+20.07.2025Amazon Ad free for PrimSAO PAULO     BR               10,00        0,00
+                                                     
+ 
+         Compras parceladas                          
+25.03.2025LEANDRO HENRI PARC 04/10 LONDRINA    BR               12,10        0,00
+28.03.2025LEANDRO HENRI PARC 04/10 LONDRINA    BR               24,21        0,00
+30.03.2025LEANDRO HENRI PARC 04/10 LONDRINA    BR               18,15        0,00
+02.06.2025MP*SUDESTEIMP PARC 02/12 OSASCO      BR               24,52        0,00
+02.07.2025MERCADOPAGO*E PARC 01/06 OSASCO      BR               42,93        0,00
+03.10.2024GASLAR        PARC 10/12 LONDRINA    BR              188,91        0,00
+04.05.2025EC *EBAZARCOM PARC 03/06 CAJAMAR     BR               56,20        0,00
+08.01.2025LEANDRO HENRI PARC 07/12 LONDRINA    BR              184,70        0,00
+08.05.2025ZP *ENGE SERV PARC 03/12 Londrina    BR               89,81        0,00
+11.07.2025MERCADOPAGO*M PARC 01/02 OSASCO      BR               13,00        0,00
+11.07.2025DM          * PARC 01/06 Dublin      BR               35,14        0,00
+12.05.2025MP*JPTECNOLOG PARC 03/12 OSASCO      BR              291,66        0,00
+15.01.2025PINPAG *FABIO PARC 07/21 SAO CAETANO BR              659,73        0,00
+15.03.2025MP*GROWTHSUPP PARC 05/06 OSASCO      BR               40,30        0,00
+20.03.2025LEANDRO HENRI PARC 05/10 LONDRINA    BR               30,26        0,00
+21.04.202556.042.918 EM PARC 04/04 LONDRINA    BR              172,59        0,00
+20.07.2025ANALIVET CLIN PARC 01/03 LONDRINA    BR              108,00        0,00
+21.07.2025DM*TEMU       PARC 01/06 SAO PAULO   BR                8,79        0,00
+21.07.2025EC *JPTECNOLO PARC 01/10 IBIPOR      BR              179,97        0,00
+                                                     
+ 
+         SubTotal                                           8.143,66        0,00
+                                                     
+ 
+         Total                                              8.143,66        0,00
+ 
+ 
+RESUMO EM REAL
+--------------------------------------------------------------------------------
+   Saldo      Pagamento/    Compras/       Total     Lim. extra         Saldo   
+  Anterior     Créditos     Débitos          R$       utilizado      Atual - R$ 
+--------------------------------------------------------------------------------
+  7.193,36 -  -7.450,94 +   8.401,24 =    8.143,66 -       0,00 =       8.143,66
+--------------------------------------------------------------------------------
+ 
+RESUMO EM DÓLAR
+--------------------------------------------------------------------------------
+  Compras/     Outros                      Saldo       Taxa de         Saldo    
+   Saques      débitos      Créditos      Atual U$    conversão      convertido 
+--------------------------------------------------------------------------------
+      0,00 -       0,00 +       0,00 =        0,00   X   0,0000 =           0,00
+--------------------------------------------------------------------------------
+ 
+ 
+LIMITES - R$
+--------------------------------------------------------------------------------
+Total para transações à vista        : 28.612,00
+Saques                               : 28.612,00
+(Incluido no total transação à vista)
+Total para transações parceladas     :    0,00
+Crediário                            : 18.535,00
+ 
+ 
+ENCARGOS FINANCEIROS - R$              1         2
+--------------------------------------------------------------------------------
+Crédito Rotativo :                 13,76     14,16
+Crédito Parcelado:                  4,84     10,21
+Permanência      :                  1,00      1,00
+Multa            :                  2,00      2,00
+1. Para o periodo %am         
+2. Máximo próximo periodo %am 
+ 
+ 
+PONTO PRA VOCÊ/LIVELO
+--------------------------------------------------------------------------------
+    Pontuação acumulada Até 24.07.2025 :       0
+--------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+

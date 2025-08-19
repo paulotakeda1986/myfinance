@@ -1,0 +1,189 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                 SISBB - Sistema de Informações Banco do Brasil                 
+19/08/2025                       Auto-Atendimento                       17:18:07
+                           Fatura do Cartão de Crédito                          
+ 
+ 
+Cliente         : PAULO R S TAKEDA                 
+Nr.Cartão       : 4854.****.****.3580         
+Modalidade      : OUROCARD FACIL VISA              
+ 
+--------------------------------------------------------------------------------
+                     L A N Ç A M E N T O S    F U T U R O S                     
+--------------------------------------------------------------------------------
+ 
+DEMONSTRATIVO
+--------------------------------------------------------------------------------
+Data     Transações                             País        Valor R$   Valor US$
+--------------------------------------------------------------------------------
+                                                     
+ 
+         1-PAULO R S                                 
+                                                     
+         SALDO FATURA ANTERIOR                  BR          8.143,66        0,00
+                                                     
+ 
+         Pagamentos                                  
+08/08    PGTO. CASH AG.    0832 000083200  200  100        -8.143,66        0,00
+                                                     
+ 
+         Compras a vista                             
+ 
+         Compras Diversas                            
+25/07    VAGasparotto           LONDRINA        BR             29,00        0,00
+25/07    POSTO INDUSVILLE       LONDRINA        BR             40,00        0,00
+25/07    SUPERMERCADO 88        LONDRINA        BR             52,77        0,00
+25/07    ARCO LESTE CONVENI     LONDRINA        BR             26,00        0,00
+
+26/07    P.H.MURIELI INFORMATICALONDRINA        BR             69,80        0,00
+26/07    ARCO LESTE CONVENI     LONDRINA        BR             36,00        0,00
+26/07    SUPERMERCADO 88        LONDRINA        BR            179,37        0,00
+26/07    LEROY MERLIN           LONDRINA        BR            100,79        0,00
+26/07    PET GARLLI             LONDRINA        BR             31,60        0,00
+26/07    POSTO INDUSVILLE       LONDRINA        BR             68,00        0,00
+26/07    P S MARKET             LONDRINA        BR             68,00        0,00
+26/07    POSTO INDUSVILLE       LONDRINA        BR            100,00        0,00
+
+27/07    MUFFATO JK             LONDRINA        BR             35,88        0,00
+
+28/07    MERCADOPAGO*MARCELINHOSOSASCO          BR             16,00        0,00
+28/07    MERCADOPAGO*MARCELINHOSOSASCO          BR             52,00        0,00
+28/07    SUPERMERCADO 88        LONDRINA        BR             12,53        0,00
+28/07    FARMACIA HIPERFARMA    LONDRINA        BR              9,52        0,00
+
+29/07    PAC D ZONA LE          LONDRINA        BR            129,90        0,00
+29/07    SUPERMERCADO 88        LONDRINA        BR             12,50        0,00
+29/07    SUPERMERCADO 88        LONDRINA        BR             29,39        0,00
+29/07    IFD*PANIFICADORA E CON LONDRINA        BR             33,98        0,00
+
+30/07    ARCO LESTE CONVENI     LONDRINA        BR             36,00        0,00
+
+31/07    MERCADOPAGO*MARCELINHOSOSASCO          BR             65,00        0,00
+31/07    MERCADOPAGO*MARCELINHOSOSASCO          BR              7,50        0,00
+31/07    SUPER MUFFATO          CASCAVEL        BR            106,04        0,00
+
+01/08    POSTO INDUSVILLE       LONDRINA        BR             36,90        0,00
+
+02/08    PG *ZE DELIVERY ZE DEL SAO PAULO       BR             39,64        0,00
+02/08    MERCADOPAGO*MARCELINHOSOSASCO          BR             65,00        0,00
+02/08    MERCADOPAGO*MARCELINHOSOSASCO          BR             16,00        0,00
+02/08    POSTO INDUSVILLE       LONDRINA        BR             70,00        0,00
+
+03/08    ARCO LESTE CONVENI     LONDRINA        BR             24,00        0,00
+03/08    IFD    *M P CURZEL     LONDRINA        BR             43,95        0,00
+
+04/08    PET GARLLI             LONDRINA        BR             36,99        0,00
+04/08    SUPERMERCADO 88        LONDRINA        BR             79,30        0,00
+
+05/08    SUPERMERCADO 88        LONDRINA        BR             37,29        0,00
+
+06/08    ARCO LESTE CONVENI     LONDRINA        BR             40,00        0,00
+06/08    AmazonPrimeBR          SAO PAULO       BR             19,90        0,00
+06/08    IFOOD CLUB             Osasco          BR             12,90        0,00
+
+07/08    VAGasparotto           LONDRINA        BR             25,00        0,00
+07/08    ARCO LESTE CONVENI     LONDRINA        BR             45,75        0,00
+
+08/08    IFD*50371373 ALBERTO K LONDRINA        BR             52,43        0,00
+
+09/08    SUPERMERCADO 88        LONDRINA        BR             57,16        0,00
+09/08    GLX    *FRANCOAFLIX    Londrina        BR             69,90        0,00
+09/08    IFD*PANIFICADORA E CON LONDRINA        BR             60,80        0,00
+
+10/08    SUPERMERCADO 88        LONDRINA        BR             51,16        0,00
+10/08    POSTO INDUSVILLE       LONDRINA        BR             82,61        0,00
+10/08    POSTO INDUSVILLE       LONDRINA        BR             84,50        0,00
+10/08    IFD*T A AMERICO DE SOU LONDRINA        BR             50,70        0,00
+
+11/08    SUPERMERCADO 88        LONDRINA        BR             40,35        0,00
+
+12/08    ARCO LESTE CONVENI     LONDRINA        BR             20,00        0,00
+12/08    PET GARLLI             LONDRINA        BR             19,23        0,00
+12/08    DL     *GOOGLE Tinder  SAO PAULO       BR             35,99        0,00
+
+13/08    ARCO LESTE CONVENI     LONDRINA        BR             16,00        0,00
+13/08    SUPERMERCADO 88        LONDRINA        BR             54,05        0,00
+
+14/08    Paiva e Urbick comercioLondrina        BR            140,00        0,00
+14/08    DL *GOOGLE Ellation    SAO PAULO       BR             14,99        0,00
+
+15/08    MERCADOPAGO*MARCELINHOSLONDRINA        BR             20,00        0,00
+15/08    POSTO INDUSVILLE       LONDRINA        BR             38,90        0,00
+15/08    POSTO AEROPORTO        LONDRINA        BR             44,90        0,00
+15/08    MUFFATO JK             LONDRINA        BR              9,98        0,00
+
+16/08    DM     *helphbomaxcom  New York        BR             19,95        0,00
+16/08    POSTO INDUSVILLE       LONDRINA        BR             88,90        0,00
+
+17/08    NETFLIX.COM            SAO PAULO       BR             59,90        0,00
+17/08    IFD*J R PEITL  CIA LTDALONDRINA        BR             40,99        0,00
+17/08    SUPER MUFFATO          CASCAVEL        BR            101,76        0,00
+17/08    SUPER MUFFATO          CASCAVEL        BR             21,43        0,00
+
+         Restaurantes
+01/08    LANCHONETE SHANDUELLA  LONDRINA        BR             44,50        0,00
+01/08    BarPlacaA              LONDRINA        BR             43,65        0,00
+02/08    IFD*RESTAURANTE OKADA  LONDRINA        BR             33,89        0,00
+03/08    GIOVANI LANCHES        LONDRINA        BR             55,60        0,00
+03/08    IFD         *ZAMP SA   LONDRINA        BR             73,86        0,00
+05/08    CAFE E PROSA LANCHONET LONDRINA        BR              4,00        0,00
+07/08    BAR E RES INDUSVILLE   LONDRINA        BR             33,00        0,00
+08/08    IFD*A. K. MIYAZAKI DOS LONDRINA        BR             65,89        0,00
+14/08    BAR E RES INDUSVILLE   LONDRINA        BR             10,00        0,00
+15/08    TomioChimazaki         LONDRINA        BR             57,25        0,00
+                                                     
+ 
+         Compras/Pagamento de contas parceladas      
+ 
+         Compras Diversas                            
+02/07    MERCADOPAGO*E PARC 02/06 OSASCO        BR             42,93        0,00
+27/07    DM          * PARC 01/06 Dublin        BR             21,40        0,00
+02/06    MP*SUDESTEIMP PARC 03/12 OSASCO        BR             24,52        0,00
+03/10    GASLAR        PARC 11/12 LONDRINA      BR            188,91        0,00
+04/05    EC *EBAZARCOM PARC 04/06 CAJAMAR       BR             56,20        0,00
+08/05    ZP *ENGE SERV PARC 04/12 Londrina      BR             89,81        0,00
+11/07    MERCADOPAGO*M PARC 02/02 OSASCO        BR             13,00        0,00
+11/07    DM          * PARC 02/06 Dublin        BR             35,09        0,00
+12/05    MP*JPTECNOLOG PARC 04/12 OSASCO        BR            291,66        0,00
+15/01    PINPAG *FABIO PARC 08/21 SAO CAETANO   BR            659,73        0,00
+15/03    MP*GROWTHSUPP PARC 06/06 OSASCO        BR             40,30        0,00
+ 
+         Restaurantes                                
+25/03    LEANDRO HENRI PARC 05/10 LONDRINA      BR             12,10        0,00
+28/03    LEANDRO HENRI PARC 05/10 LONDRINA      BR             24,21        0,00
+30/03    LEANDRO HENRI PARC 05/10 LONDRINA      BR             18,15        0,00
+08/01    LEANDRO HENRI PARC 08/12 LONDRINA      BR            184,70        0,00
+                                                     
+ 
+         SubTotal                                           5.361,12        0,00
+                                                     
+ 
+         Total                                              5.361,12        0,00
+
+
+
+
+
+
+
+
+
+
