@@ -130,6 +130,7 @@ Table transferencia_financeira {
     id_tipo_transferencia_financeira bigint [not null]
     data_transferencia date [not null, default: 'now()']
     descricao_transferencia varchar [not null, default: '']
+    valor_transferencia numeric(15,2) [not null, default: 0]
     id_carteira_origem bigint [null]
     id_carteira_destino bigint [null]
     id_usuario bigint [not null]
