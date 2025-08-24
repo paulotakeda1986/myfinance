@@ -109,6 +109,10 @@ Table fatura_cartao_credito {
     data_fechamento_fatura_cartao_credito date [null]
     id_usuario bigint [not null]
     criado_em timestamptz [not null, default: 'now()']
+
+    indexes {
+        (id_cartao_credito, id_competencia) [unique]
+    }
 }
 
 Ref: fatura_cartao_credito.id_cartao_credito > cartao_credito.id_cartao_credito
