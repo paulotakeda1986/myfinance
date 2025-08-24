@@ -33,3 +33,5 @@ INSERT INTO categoria_despesa (id_categoria_despesa, nome, fl_fixo, id_usuario) 
 INSERT INTO categoria_despesa (id_categoria_despesa, nome, fl_fixo, id_usuario) VALUES (33 , 'Supermercado', FALSE, 1);
 INSERT INTO categoria_despesa (id_categoria_despesa, nome, fl_fixo, id_usuario) VALUES (34 , 'Conveniência', FALSE, 1);
 INSERT INTO categoria_despesa (id_categoria_despesa, nome, fl_fixo, id_usuario) VALUES (35 , 'Pets', FALSE, 1);
+INSERT INTO categoria_despesa (id_categoria_despesa, nome, fl_fixo, id_usuario) VALUES (36 , 'Saque de dinheiro', FALSE, 1);
+INSERT INTO categoria_despesa (id_categoria_despesa, nome, fl_fixo, id_usuario) VALUES (37 , 'Aposta', FALSE, 1);
