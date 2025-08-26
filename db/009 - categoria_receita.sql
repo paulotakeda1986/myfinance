@@ -7,3 +7,4 @@ INSERT INTO categoria_receita (id_categoria_receita, nome, fl_fixo, id_usuario) 
 INSERT INTO categoria_receita (id_categoria_receita, nome, fl_fixo, id_usuario) VALUES (7 ,'Rendimentos', false, 1);
 INSERT INTO categoria_receita (id_categoria_receita, nome, fl_fixo, id_usuario) VALUES (8 ,'Antecipação saque FGTS', false, 1);
 INSERT INTO categoria_receita (id_categoria_receita, nome, fl_fixo, id_usuario) VALUES (9 ,'Outros', false, 1);
+INSERT INTO categoria_receita (id_categoria_receita, nome, fl_fixo, id_usuario) VALUES (10,'Recebimento de aposta', false, 1);
