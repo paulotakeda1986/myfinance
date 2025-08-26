@@ -21,3 +21,17 @@ INSERT INTO categoria_despesa (id_categoria_despesa, nome, fl_fixo, id_usuario) 
 INSERT INTO categoria_despesa (id_categoria_despesa, nome, fl_fixo, id_usuario) VALUES (21 , 'Saúde', FALSE, 1);
 INSERT INTO categoria_despesa (id_categoria_despesa, nome, fl_fixo, id_usuario) VALUES (22 , 'Beleza', FALSE, 1);
 INSERT INTO categoria_despesa (id_categoria_despesa, nome, fl_fixo, id_usuario) VALUES (23 , 'Outros', FALSE, 1);
+INSERT INTO categoria_despesa (id_categoria_despesa, nome, fl_fixo, id_usuario) VALUES (24 , 'Internet', FALSE, 1);
+INSERT INTO categoria_despesa (id_categoria_despesa, nome, fl_fixo, id_usuario) VALUES (25 , 'Anuidade cartão crédito', FALSE, 1);
+INSERT INTO categoria_despesa (id_categoria_despesa, nome, fl_fixo, id_usuario) VALUES (26 , 'Alura', FALSE, 1);
+INSERT INTO categoria_despesa (id_categoria_despesa, nome, fl_fixo, id_usuario) VALUES (27 , 'PSN', FALSE, 1);
+INSERT INTO categoria_despesa (id_categoria_despesa, nome, fl_fixo, id_usuario) VALUES (28 , 'Serviços, streams e afins', FALSE, 1);
+INSERT INTO categoria_despesa (id_categoria_despesa, nome, fl_fixo, id_usuario) VALUES (29 , 'Ifood', FALSE, 1);
+INSERT INTO categoria_despesa (id_categoria_despesa, nome, fl_fixo, id_usuario) VALUES (30 , 'Google One', FALSE, 1);
+INSERT INTO categoria_despesa (id_categoria_despesa, nome, fl_fixo, id_usuario) VALUES (31 , 'Uber', FALSE, 1);
+INSERT INTO categoria_despesa (id_categoria_despesa, nome, fl_fixo, id_usuario) VALUES (32 , 'Restaurante', FALSE, 1);
+INSERT INTO categoria_despesa (id_categoria_despesa, nome, fl_fixo, id_usuario) VALUES (33 , 'Supermercado', FALSE, 1);
+INSERT INTO categoria_despesa (id_categoria_despesa, nome, fl_fixo, id_usuario) VALUES (34 , 'Conveniência', FALSE, 1);
+INSERT INTO categoria_despesa (id_categoria_despesa, nome, fl_fixo, id_usuario) VALUES (35 , 'Pets', FALSE, 1);
+INSERT INTO categoria_despesa (id_categoria_despesa, nome, fl_fixo, id_usuario) VALUES (36 , 'Saque de dinheiro', FALSE, 1);
+INSERT INTO categoria_despesa (id_categoria_despesa, nome, fl_fixo, id_usuario) VALUES (37 , 'Aposta', FALSE, 1);
