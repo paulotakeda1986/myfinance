@@ -9,7 +9,7 @@
             "group": "personal",
             "database": "myfinance",
             "username": "postgres",
-            "password": "@g1l1"
+            "password": "123456"
         }
     ]
 }
