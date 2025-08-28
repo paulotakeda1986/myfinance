@@ -20,6 +20,7 @@ Table categoria_despesa {
     id_categoria_despesa bigint [primary key, increment]
     nome varchar [not null]
     fl_fixo boolean [not null, default: false]
+    valor_fixo_categoria_despesa number(15,2) [not null, default: 0]
     id_usuario bigint [not null]
     criado_em timestamptz [not null, default: 'now()']
 
@@ -34,6 +35,7 @@ Table categoria_receita {
     id_categoria_receita bigint [primary key, increment]
     nome varchar [not null]
     fl_fixo boolean [not null, default: false]
+    valor_fixo_categoria_receita number(15,2) [not null, default: 0]
     id_usuario bigint [not null]
     criado_em timestamptz [not null, default: 'now()']
 
