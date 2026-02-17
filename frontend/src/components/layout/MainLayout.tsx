@@ -1,6 +1,6 @@
 import { Outlet, Link, useLocation } from 'react-router-dom';
 import { useAuth } from '../../context/AuthContext';
-import { LayoutDashboard, Wallet, Receipt, ArrowLeftRight, CreditCard, LogOut, Menu, Sun, Moon } from 'lucide-react';
+import { LayoutDashboard, Wallet, Receipt, ArrowLeftRight, CreditCard, LogOut, Menu, Sun, Moon, X } from 'lucide-react';
 import { useState } from 'react';
 import { cn } from '../../lib/utils';
 import { useTheme } from '../../context/ThemeContext';
@@ -9,7 +9,7 @@ export default function MainLayout() {
   const { signOut, user } = useAuth();
   const { theme, toggleTheme } = useTheme();
   const location = useLocation();
-  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+  const [isSidebarOpen, setIsSidebarOpen] = useState(true);
 
   const navigation = [
     { name: 'Dashboard', href: '/', icon: LayoutDashboard },
@@ -21,25 +21,27 @@ export default function MainLayout() {
 
   return (
     <div className="min-h-screen bg-background flex">
-      {/* Sidebar Overlay */}
-      {isSidebarOpen && (
-        <div 
-          className="fixed inset-0 z-40 bg-black/50"
-          onClick={() => setIsSidebarOpen(false)}
-        />
-      )}
-
       {/* Sidebar */}
       <aside className={cn(
-        "fixed inset-y-0 left-0 z-50 w-64 bg-card shadow-lg transform transition-transform duration-200 ease-in-out",
-        isSidebarOpen ? "translate-x-0" : "-translate-x-full"
+        "bg-card shadow-lg transition-all duration-300 ease-in-out flex-shrink-0",
+        isSidebarOpen ? "w-64" : "w-0"
       )}>
-        <div className="flex flex-col h-full">
-          <div className="flex items-center justify-center h-16 border-b">
+        <div className={cn(
+          "flex flex-col h-full w-64 transition-opacity duration-300",
+          isSidebarOpen ? "opacity-100" : "opacity-0"
+        )}>
+          <div className="flex items-center justify-between h-16 px-4 border-b">
             <h1 className="text-xl font-bold text-primary">MyFinance</h1>
+            <button
+              onClick={() => setIsSidebarOpen(false)}
+              className="text-muted-foreground hover:text-foreground"
+              title="Fechar menu"
+            >
+              <X className="w-5 h-5" />
+            </button>
           </div>
 
-          <nav className="flex-1 px-4 py-6 space-y-1">
+          <nav className="flex-1 px-4 py-6 space-y-1 overflow-y-auto">
             {navigation.map((item) => {
               const Icon = item.icon;
               const isActive = location.pathname === item.href;
@@ -53,7 +55,6 @@ export default function MainLayout() {
                       ? "bg-primary text-primary-foreground shadow-sm"
                       : "text-muted-foreground hover:bg-muted hover:text-foreground"
                   )}
-                  onClick={() => setIsSidebarOpen(false)}
                 >
                   <Icon className="w-5 h-5 mr-3" />
                   {item.name}
@@ -100,17 +101,20 @@ export default function MainLayout() {
       </aside>
 
       {/* Main Content */}
-      <div className="flex-1 flex flex-col min-h-screen">
-        {/* Header with Hamburger Menu */}
-        <header className="flex items-center justify-between h-16 px-4 bg-card shadow-sm border-b border-border">
+      <div className="flex-1 flex flex-col min-h-screen overflow-hidden">
+        {/* Header */}
+        <header className="flex items-center justify-between h-16 px-4 bg-card shadow-sm border-b border-border flex-shrink-0">
           <div className="flex items-center">
-            <button
-              onClick={() => setIsSidebarOpen(true)}
-              className="text-muted-foreground hover:text-foreground"
-            >
-              <Menu className="w-6 h-6" />
-            </button>
-            <span className="ml-4 text-lg font-semibold text-primary">MyFinance</span>
+            {!isSidebarOpen && (
+              <button
+                onClick={() => setIsSidebarOpen(true)}
+                className="text-muted-foreground hover:text-foreground mr-4"
+                title="Abrir menu"
+              >
+                <Menu className="w-6 h-6" />
+              </button>
+            )}
+            <span className="text-lg font-semibold text-primary">MyFinance</span>
           </div>
           <button
             onClick={toggleTheme}
