@@ -1,3 +1,0 @@
-INSERT INTO cartao_credito(id_cartao_credito, id_banco, nome, limite_total, limite_atual, id_usuario) VALUES (1, 1, 'Banco do Brasil', 28612, 28612, 1);
-INSERT INTO cartao_credito(id_cartao_credito, id_banco, nome, limite_total, limite_atual, id_usuario) VALUES (2, 19, 'NUBANK', 10450, 10450, 1);
-INSERT INTO cartao_credito(id_cartao_credito, id_banco, nome, limite_total, limite_atual, id_usuario) VALUES (3, 5, 'Caixa Econômica Federal', 22000, 22000, 1);

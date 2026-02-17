@@ -1,1 +1,0 @@
-INSERT INTO usuario(id_usuario, email, login, senha) VALUES (1, 'paulo.takeda@gmail.com', 'ptakeda', '123456');

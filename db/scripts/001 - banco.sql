@@ -1,0 +1,21 @@
+-- Inserção dos bancos na tabela banco
+INSERT INTO banco (id_banco, codigo_banco, nome, criado_em) VALUES
+  (1, '001', 'Banco do Brasil S.A.', now()),
+  (2, '003', 'Banco da Amazônia S.A.', now()),
+  (3, '004', 'Banco do Nordeste do Brasil S.A.', now()),
+  (4, '070', 'Banco de Brasília S.A.', now()),
+  (5, '104', 'Caixa Econômica Federal', now()),
+  (6, '237', 'Banco Bradesco S.A.', now()),
+  (7, '341', 'Itaú Unibanco S.A.', now()),
+  (8, '745', 'Banco Citibank S.A.', now()),
+  (9, '756', 'Banco Cooperativo do Brasil S.A. – Bancoob', now()),
+  (10, '104', 'Caixa Econômica Federal', now()),
+  (11, '748', 'Banco Cooperativo Sicredi S.A.', now()),
+  (12, '033', 'Banco Santander (Brasil) S.A.', now()),
+  (13, '389', 'Banco Mercantil do Brasil S.A.', now()),
+  (14, '422', 'Banco Safra S.A.', now()),
+  (15, '633', 'Banco Rendimento S.A.', now()),
+  (16, '745', 'Banco Citibank S.A.', now()),
+  (17, '748', 'Banco Cooperativo Sicredi S.A.', now()),
+  (18, '756', 'Banco Cooperativo do Brasil S.A. – Bancoob', now()),
+  (19, '260', 'Nubank S.A.', now());

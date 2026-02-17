@@ -1,0 +1,9 @@
+E:\teste\myfinance\backend\MyFinance.API\obj\Debug\net9.0\MyFinance.API.csproj.AssemblyReference.cache
+E:\teste\myfinance\backend\MyFinance.API\obj\Debug\net9.0\rpswa.dswa.cache.json
+E:\teste\myfinance\backend\MyFinance.API\obj\Debug\net9.0\MyFinance.API.GeneratedMSBuildEditorConfig.editorconfig
+E:\teste\myfinance\backend\MyFinance.API\obj\Debug\net9.0\MyFinance.API.AssemblyInfoInputs.cache
+E:\teste\myfinance\backend\MyFinance.API\obj\Debug\net9.0\MyFinance.API.AssemblyInfo.cs
+E:\teste\myfinance\backend\MyFinance.API\obj\Debug\net9.0\MyFinance.API.csproj.CoreCompileInputs.cache
+E:\teste\myfinance\backend\MyFinance.API\obj\Debug\net9.0\MyFinance.API.MvcApplicationPartsAssemblyInfo.cs
+E:\teste\myfinance\backend\MyFinance.API\obj\Debug\net9.0\MyFinance.API.MvcApplicationPartsAssemblyInfo.cache
+E:\teste\myfinance\backend\MyFinance.API\obj\Debug\net9.0\MyFinance.API.sourcelink.json
