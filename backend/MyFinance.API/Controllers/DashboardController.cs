@@ -89,6 +89,7 @@ namespace MyFinance.API.Controllers
                 
                 var faturas = await _uow.FaturasCartaoCredito.FindAsync(f => 
                     f.UsuarioId == userId && 
+                    f.Competencia != null &&
                     f.Competencia.Mes == mes && 
                     f.Competencia.Exercicio == ano);
                 
@@ -178,6 +179,7 @@ namespace MyFinance.API.Controllers
                     var faturas = await _uow.FaturasCartaoCredito.FindAsync(f => 
                         f.UsuarioId == userId && 
                         f.CartaoCreditoId == c.Id && 
+                        f.Competencia != null &&
                         f.Competencia.Mes == mes && 
                         f.Competencia.Exercicio == ano);
                     
