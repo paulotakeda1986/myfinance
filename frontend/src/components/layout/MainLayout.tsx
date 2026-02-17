@@ -21,14 +21,27 @@ export default function MainLayout() {
 
   return (
     <div className="min-h-screen bg-background flex">
+      {/* Mobile Overlay */}
+      {isSidebarOpen && (
+        <div 
+          className="fixed inset-0 z-40 bg-black/50 md:hidden"
+          onClick={() => setIsSidebarOpen(false)}
+        />
+      )}
+
       {/* Sidebar */}
       <aside className={cn(
-        "bg-card shadow-lg transition-all duration-300 ease-in-out flex-shrink-0",
-        isSidebarOpen ? "w-64" : "w-0"
+        "bg-card shadow-lg transition-all duration-300 ease-in-out",
+        // Desktop: collapsible sidebar
+        "hidden md:block md:flex-shrink-0",
+        isSidebarOpen ? "md:w-64" : "md:w-0",
+        // Mobile: overlay sidebar
+        "md:relative fixed inset-y-0 left-0 z-50 w-64",
+        isSidebarOpen ? "translate-x-0" : "-translate-x-full md:translate-x-0"
       )}>
         <div className={cn(
           "flex flex-col h-full w-64 transition-opacity duration-300",
-          isSidebarOpen ? "opacity-100" : "opacity-0"
+          isSidebarOpen ? "opacity-100" : "md:opacity-0 md:pointer-events-none"
         )}>
           <div className="flex items-center justify-between h-16 px-4 border-b">
             <h1 className="text-xl font-bold text-primary">MyFinance</h1>
@@ -55,6 +68,12 @@ export default function MainLayout() {
                       ? "bg-primary text-primary-foreground shadow-sm"
                       : "text-muted-foreground hover:bg-muted hover:text-foreground"
                   )}
+                  onClick={() => {
+                    // Close sidebar on mobile after navigation
+                    if (window.innerWidth < 768) {
+                      setIsSidebarOpen(false);
+                    }
+                  }}
                 >
                   <Icon className="w-5 h-5 mr-3" />
                   {item.name}
@@ -105,15 +124,13 @@ export default function MainLayout() {
         {/* Header */}
         <header className="flex items-center justify-between h-16 px-4 bg-card shadow-sm border-b border-border flex-shrink-0">
           <div className="flex items-center">
-            {!isSidebarOpen && (
-              <button
-                onClick={() => setIsSidebarOpen(true)}
-                className="text-muted-foreground hover:text-foreground mr-4"
-                title="Abrir menu"
-              >
-                <Menu className="w-6 h-6" />
-              </button>
-            )}
+            <button
+              onClick={() => setIsSidebarOpen(!isSidebarOpen)}
+              className="text-muted-foreground hover:text-foreground mr-4"
+              title={isSidebarOpen ? "Fechar menu" : "Abrir menu"}
+            >
+              <Menu className="w-6 h-6" />
+            </button>
             <span className="text-lg font-semibold text-primary">MyFinance</span>
           </div>
           <button
