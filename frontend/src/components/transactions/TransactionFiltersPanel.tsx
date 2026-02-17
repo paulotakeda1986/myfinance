@@ -8,15 +8,9 @@ import {
   SelectTrigger,
   SelectValue,
 } from "../ui/select";
-import { Calendar } from "../ui/calendar";
-import {
-  Popover,
-  PopoverContent,
-  PopoverTrigger,
-} from "../ui/popover";
-import { CalendarIcon, X } from "lucide-react";
+import { Input } from "../ui/input";
+import { X } from "lucide-react";
 import { format } from "date-fns";
-import { cn } from "../../lib/utils";
 import { Carteira } from "../../services/walletService";
 import { CartaoCredito } from "../../services/creditCardService";
 
@@ -162,64 +156,24 @@ export function TransactionFiltersPanel({
 
         {/* Data Início */}
         <div className="space-y-2">
-          <Label>Data Início</Label>
-          <Popover>
-            <PopoverTrigger asChild>
-              <Button
-                variant="outline"
-                className={cn(
-                  "w-full justify-start text-left font-normal",
-                  !localFilters.dataInicio && "text-muted-foreground"
-                )}
-              >
-                <CalendarIcon className="mr-2 h-4 w-4" />
-                {localFilters.dataInicio ? (
-                  format(localFilters.dataInicio, "dd/MM/yyyy")
-                ) : (
-                  <span>Selecione</span>
-                )}
-              </Button>
-            </PopoverTrigger>
-            <PopoverContent className="w-auto p-0">
-              <Calendar
-                mode="single"
-                selected={localFilters.dataInicio}
-                onSelect={(date) => updateFilter("dataInicio", date)}
-                initialFocus
-              />
-            </PopoverContent>
-          </Popover>
+          <Label htmlFor="dataInicio">Data Início</Label>
+          <Input
+            id="dataInicio"
+            type="date"
+            value={localFilters.dataInicio ? format(localFilters.dataInicio, "yyyy-MM-dd") : ""}
+            onChange={(e) => updateFilter("dataInicio", e.target.value ? new Date(e.target.value) : undefined)}
+          />
         </div>
 
         {/* Data Fim */}
         <div className="space-y-2">
-          <Label>Data Fim</Label>
-          <Popover>
-            <PopoverTrigger asChild>
-              <Button
-                variant="outline"
-                className={cn(
-                  "w-full justify-start text-left font-normal",
-                  !localFilters.dataFim && "text-muted-foreground"
-                )}
-              >
-                <CalendarIcon className="mr-2 h-4 w-4" />
-                {localFilters.dataFim ? (
-                  format(localFilters.dataFim, "dd/MM/yyyy")
-                ) : (
-                  <span>Selecione</span>
-                )}
-              </Button>
-            </PopoverTrigger>
-            <PopoverContent className="w-auto p-0">
-              <Calendar
-                mode="single"
-                selected={localFilters.dataFim}
-                onSelect={(date) => updateFilter("dataFim", date)}
-                initialFocus
-              />
-            </PopoverContent>
-          </Popover>
+          <Label htmlFor="dataFim">Data Fim</Label>
+          <Input
+            id="dataFim"
+            type="date"
+            value={localFilters.dataFim ? format(localFilters.dataFim, "yyyy-MM-dd") : ""}
+            onChange={(e) => updateFilter("dataFim", e.target.value ? new Date(e.target.value) : undefined)}
+          />
         </div>
       </div>
 

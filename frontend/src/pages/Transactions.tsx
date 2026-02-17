@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useQuery, useMutation, useQueryClient } from "@tanstack/react-query";
-import { Plus, Pencil, Trash2, Filter } from "lucide-react";
+import { Plus, Pencil, Trash2, Filter, FilterX } from "lucide-react";
 import { format } from "date-fns";
 import axios from "axios";
 import { Button } from "../components/ui/button";
@@ -233,6 +233,9 @@ export default function Transactions() {
     return true;
   }) || [];
 
+  // Check if any filters are active
+  const hasActiveFilters = Object.keys(filters).length > 0 && Object.values(filters).some(v => v !== undefined && v !== "");
+
   return (
     <div className="space-y-6">
       {error && (
@@ -279,7 +282,11 @@ export default function Transactions() {
                 ))}
             </select>
             <Button variant="outline" onClick={() => setShowFilters(!showFilters)}>
-              <Filter className="mr-2 h-4 w-4" />
+              {hasActiveFilters ? (
+                <FilterX className="mr-2 h-4 w-4" />
+              ) : (
+                <Filter className="mr-2 h-4 w-4" />
+              )}
               Filtros
             </Button>
             <Button onClick={handleCreate}>
