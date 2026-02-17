@@ -19,6 +19,7 @@ import { creditCardService } from "../services/creditCardService";
 import { CreditCard as CreditCardIcon, Wallet as WalletIcon } from "lucide-react";
 import { parseDateOnly } from "../lib/dateUtils";
 import { TransactionFiltersPanel, TransactionFilters } from "../components/transactions/TransactionFiltersPanel";
+import { TransactionSummaryCard } from "../components/transactions/TransactionSummaryCard";
 
 export default function Transactions() {
   const queryClient = useQueryClient();
@@ -250,6 +251,11 @@ export default function Transactions() {
       }
     }
     
+    // Filter by payment status
+    if (filters.efetivada !== undefined && transaction.efetivada !== filters.efetivada) {
+      return false;
+    }
+    
     return true;
   }) || [];
 
@@ -330,6 +336,9 @@ export default function Transactions() {
             </Button>
         </div>
       </div>
+
+      {/* Summary Card */}
+      <TransactionSummaryCard transactions={filteredTransactions} />
 
       {/* Filters Panel */}
       {showFilters && (

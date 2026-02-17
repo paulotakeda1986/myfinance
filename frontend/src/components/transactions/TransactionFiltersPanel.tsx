@@ -21,6 +21,7 @@ export interface TransactionFilters {
   cartaoCreditoId?: number;
   dataInicio?: Date;
   dataFim?: Date;
+  efetivada?: boolean; // true: Pagos, false: Pendentes, undefined: Todos
 }
 
 interface TransactionFiltersProps {
@@ -79,6 +80,32 @@ export function TransactionFiltersPanel({
               <SelectItem value="none">Todos</SelectItem>
               <SelectItem value="1">Receita</SelectItem>
               <SelectItem value="2">Despesa</SelectItem>
+            </SelectContent>
+          </Select>
+        </div>
+
+        {/* Status de Pagamento */}
+        <div className="space-y-2">
+          <Label>Status</Label>
+          <Select
+            value={localFilters.efetivada === undefined ? "all" : localFilters.efetivada ? "paid" : "pending"}
+            onValueChange={(val) => {
+              if (val === "all") {
+                updateFilter("efetivada", undefined);
+              } else if (val === "paid") {
+                updateFilter("efetivada", true);
+              } else {
+                updateFilter("efetivada", false);
+              }
+            }}
+          >
+            <SelectTrigger>
+              <SelectValue placeholder="Todos" />
+            </SelectTrigger>
+            <SelectContent>
+              <SelectItem value="all">Todos</SelectItem>
+              <SelectItem value="paid">Pagos</SelectItem>
+              <SelectItem value="pending">Pendentes</SelectItem>
             </SelectContent>
           </Select>
         </div>
