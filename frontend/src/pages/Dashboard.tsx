@@ -414,18 +414,43 @@ export default function Dashboard() {
                                 <p className="text-sm text-muted-foreground">Nenhum cartão encontrado.</p>
                             ) : (
                                 creditCards.map((card, index) => (
-                                    <div key={index} className="flex items-center justify-between border-b pb-2 last:border-0 last:pb-0">
-                                        <div>
-                                            <p className="font-medium">{card.cartao}</p>
+                                    <div key={index} className="flex items-center justify-between border-b pb-3 last:border-0 last:pb-0">
+                                        <div className="flex-1">
+                                            <div className="flex items-center gap-2">
+                                                <p className="font-medium">{card.cartao}</p>
+                                                <span className={cn(
+                                                    "text-xs px-2 py-0.5 rounded-full font-medium",
+                                                    card.fechada 
+                                                        ? "bg-green-100 text-green-700 dark:bg-green-900/20 dark:text-green-400" 
+                                                        : "bg-orange-100 text-orange-700 dark:bg-orange-900/20 dark:text-orange-400"
+                                                )}>
+                                                    {card.fechada ? "Paga" : "Pendente"}
+                                                </span>
+                                            </div>
                                             <p className="text-xs text-muted-foreground">{card.banco}</p>
                                         </div>
-                                        <div className="text-right">
-                                            <p className="font-bold text-red-600">
-                                              {new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(card.faturaAtual)}
-                                            </p>
-                                            <p className="text-[10px] text-muted-foreground">
-                                              de {new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(card.limiteTotal)}
-                                            </p>
+                                        <div className="flex items-center gap-3">
+                                            <div className="text-right">
+                                                <p className="font-bold text-red-600">
+                                                  {new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(card.faturaAtual)}
+                                                </p>
+                                                <p className="text-[10px] text-muted-foreground">
+                                                  de {new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(card.limiteTotal)}
+                                                </p>
+                                            </div>
+                                            {!card.fechada && card.faturaAtual > 0 && (
+                                                <Button 
+                                                    size="sm" 
+                                                    variant="outline"
+                                                    onClick={() => {
+                                                        // TODO: Navigate to payment screen
+                                                        console.log('Pagar fatura do cartão:', card.cartao);
+                                                    }}
+                                                    className="text-xs"
+                                                >
+                                                    Pagar
+                                                </Button>
+                                            )}
                                         </div>
                                     </div>
                                 ))
