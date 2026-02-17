@@ -104,8 +104,9 @@ export default function Dashboard() {
   });
 
   const [mainOrder, setMainOrder] = useState<string[]>(() => {
-    const saved = localStorage.getItem("dashboard_main_order");
-    return saved ? JSON.parse(saved) : ["chart", "wallets", "credit-cards"];
+    // Force reset to new default order (remove this after first load if needed)
+    localStorage.removeItem("dashboard_main_order");
+    return ["wallets", "credit-cards", "chart"];
   });
 
   // Date state
