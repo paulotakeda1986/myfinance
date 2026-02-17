@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useQuery, useMutation, useQueryClient } from "@tanstack/react-query";
-import { Plus, Pencil, Trash2, Filter, FilterX } from "lucide-react";
+import { Plus, Pencil, Trash2, Filter, FilterX, ChevronLeft, ChevronRight } from "lucide-react";
 import { format } from "date-fns";
 import axios from "axios";
 import { Button } from "../components/ui/button";
@@ -194,6 +194,26 @@ export default function Transactions() {
       }
   }
 
+  // Navigate to previous month
+  const handlePreviousMonth = () => {
+    if (mes === 1) {
+      setMes(12);
+      setAno(ano - 1);
+    } else {
+      setMes(mes - 1);
+    }
+  };
+
+  // Navigate to next month
+  const handleNextMonth = () => {
+    if (mes === 12) {
+      setMes(1);
+      setAno(ano + 1);
+    } else {
+      setMes(mes + 1);
+    }
+  };
+
   // Apply filters to transactions
   const filteredTransactions = transactions?.filter((transaction) => {
     // Filter by tipo
@@ -250,6 +270,14 @@ export default function Transactions() {
       <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
         <h2 className="text-3xl font-bold tracking-tight">Lançamentos</h2>
         <div className="flex items-center gap-2">
+             <Button 
+               variant="outline" 
+               size="icon"
+               onClick={handlePreviousMonth}
+               title="Mês anterior"
+             >
+               <ChevronLeft className="h-4 w-4" />
+             </Button>
              <select 
                 className="flex h-10 w-full items-center justify-between rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 min-w-[120px]"
                 value={mes}
@@ -281,6 +309,14 @@ export default function Transactions() {
                     <option key={y} value={y}>{y}</option>
                 ))}
             </select>
+            <Button 
+              variant="outline" 
+              size="icon"
+              onClick={handleNextMonth}
+              title="Próximo mês"
+            >
+              <ChevronRight className="h-4 w-4" />
+            </Button>
             <Button variant="outline" onClick={() => setShowFilters(!showFilters)}>
               {hasActiveFilters ? (
                 <FilterX className="mr-2 h-4 w-4" />
