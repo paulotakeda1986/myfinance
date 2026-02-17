@@ -21,10 +21,10 @@ export default function MainLayout() {
 
   return (
     <div className="min-h-screen bg-background flex">
-      {/* Mobile Sidebar Overlay */}
+      {/* Sidebar Overlay */}
       {isSidebarOpen && (
         <div 
-          className="fixed inset-0 z-40 bg-black/50 md:hidden"
+          className="fixed inset-0 z-40 bg-black/50"
           onClick={() => setIsSidebarOpen(false)}
         />
       )}
