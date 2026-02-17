@@ -1,5 +1,6 @@
 import { TrendingUp, TrendingDown, DollarSign } from "lucide-react";
 import { Lancamento } from "../../services/transactionService";
+import { useCounterAnimation } from "../../hooks/useCounterAnimation";
 
 interface TransactionSummaryCardProps {
   transactions: Lancamento[];
@@ -16,6 +17,11 @@ export function TransactionSummaryCard({ transactions }: TransactionSummaryCardP
     .reduce((sum, t) => sum + t.valor, 0);
 
   const saldo = totalReceitas - totalDespesas;
+
+  // Animated values
+  const animatedReceitas = useCounterAnimation(totalReceitas);
+  const animatedDespesas = useCounterAnimation(totalDespesas);
+  const animatedSaldo = useCounterAnimation(saldo);
 
   const formatCurrency = (value: number) => {
     return new Intl.NumberFormat("pt-BR", {
@@ -36,7 +42,7 @@ export function TransactionSummaryCard({ transactions }: TransactionSummaryCardP
             <div>
               <p className="text-sm font-medium text-muted-foreground">Receitas</p>
               <p className="text-2xl font-bold text-green-600 dark:text-green-400">
-                {formatCurrency(totalReceitas)}
+                {formatCurrency(animatedReceitas)}
               </p>
             </div>
           </div>
@@ -53,7 +59,7 @@ export function TransactionSummaryCard({ transactions }: TransactionSummaryCardP
             <div>
               <p className="text-sm font-medium text-muted-foreground">Despesas</p>
               <p className="text-2xl font-bold text-red-600 dark:text-red-400">
-                {formatCurrency(totalDespesas)}
+                {formatCurrency(animatedDespesas)}
               </p>
             </div>
           </div>
@@ -82,7 +88,7 @@ export function TransactionSummaryCard({ transactions }: TransactionSummaryCardP
                   ? "text-blue-600 dark:text-blue-400" 
                   : "text-orange-600 dark:text-orange-400"
               }`}>
-                {formatCurrency(saldo)}
+                {formatCurrency(animatedSaldo)}
               </p>
             </div>
           </div>

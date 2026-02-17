@@ -20,6 +20,7 @@ import { CreditCard as CreditCardIcon, Wallet as WalletIcon } from "lucide-react
 import { parseDateOnly } from "../lib/dateUtils";
 import { TransactionFiltersPanel, TransactionFilters } from "../components/transactions/TransactionFiltersPanel";
 import { TransactionSummaryCard } from "../components/transactions/TransactionSummaryCard";
+import { ActiveFiltersDisplay } from "../components/transactions/ActiveFiltersDisplay";
 
 export default function Transactions() {
   const queryClient = useQueryClient();
@@ -36,6 +37,22 @@ export default function Transactions() {
   const [ano, setAno] = useState(currentDate.getFullYear());
   const [showFilters, setShowFilters] = useState(false);
   const [filters, setFilters] = useState<TransactionFilters>({});
+
+  // Remove individual filter
+  const handleRemoveFilter = (filterKey: keyof TransactionFilters) => {
+    setFilters((prev) => {
+      const newFilters = { ...prev };
+      delete newFilters[filterKey];
+      
+      // If removing origemPagamento, also clear specific wallet/card
+      if (filterKey === "origemPagamento") {
+        delete newFilters.carteiraId;
+        delete newFilters.cartaoCreditoId;
+      }
+      
+      return newFilters;
+    });
+  };
 
   // Queries
   const { data: transactions, isLoading: isLoadingTransactions } = useQuery({
@@ -339,6 +356,14 @@ export default function Transactions() {
 
       {/* Summary Card */}
       <TransactionSummaryCard transactions={filteredTransactions} />
+
+      {/* Active Filters Display */}
+      <ActiveFiltersDisplay 
+        filters={filters}
+        onRemoveFilter={handleRemoveFilter}
+        wallets={wallets || []}
+        cards={cards || []}
+      />
 
       {/* Filters Panel */}
       {showFilters && (
