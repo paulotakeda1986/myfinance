@@ -3,7 +3,8 @@ import api from "../services/api";
 import { StatCard } from "../components/dashboard/DashboardStats";
 import { DashboardChart } from "../components/dashboard/DashboardChart";
 import { Card, CardContent, CardHeader, CardTitle } from "../components/ui/card";
-import { Loader2, ArrowDownIcon, ArrowUpIcon, DollarSign, Wallet, GripVertical, CreditCard } from "lucide-react";
+import { Button } from "../components/ui/button";
+import { Loader2, ArrowDownIcon, ArrowUpIcon, DollarSign, Wallet, GripVertical, CreditCard, ChevronLeft, ChevronRight } from "lucide-react";
 import {
   DndContext,
   closestCenter,
@@ -111,6 +112,26 @@ export default function Dashboard() {
   const currentDate = new Date();
   const [mes, setMes] = useState(currentDate.getMonth() + 1);
   const [ano, setAno] = useState(currentDate.getFullYear());
+
+  // Navigate to previous month
+  const handlePreviousMonth = () => {
+    if (mes === 1) {
+      setMes(12);
+      setAno(ano - 1);
+    } else {
+      setMes(mes - 1);
+    }
+  };
+
+  // Navigate to next month
+  const handleNextMonth = () => {
+    if (mes === 12) {
+      setMes(1);
+      setAno(ano + 1);
+    } else {
+      setMes(mes + 1);
+    }
+  };
 
   const sensors = useSensors(
     useSensor(PointerSensor, {
@@ -280,6 +301,14 @@ export default function Dashboard() {
       <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
         <h2 className="text-3xl font-bold tracking-tight">Dashboard</h2>
         <div className="flex items-center gap-2">
+            <Button 
+              variant="outline" 
+              size="icon"
+              onClick={handlePreviousMonth}
+              title="Mês anterior"
+            >
+              <ChevronLeft className="h-4 w-4" />
+            </Button>
             <select 
                 className="flex h-10 w-full items-center justify-between rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 min-w-[120px]"
                 value={mes}
@@ -298,6 +327,14 @@ export default function Dashboard() {
                     <option key={y} value={y}>{y}</option>
                 ))}
             </select>
+            <Button 
+              variant="outline" 
+              size="icon"
+              onClick={handleNextMonth}
+              title="Próximo mês"
+            >
+              <ChevronRight className="h-4 w-4" />
+            </Button>
         </div>
       </div>
 

@@ -1,6 +1,7 @@
 import { Card, CardContent, CardHeader, CardTitle } from "../ui/card";
 import { ArrowDownIcon, ArrowUpIcon, DollarSign, Wallet } from "lucide-react";
 import { cn } from "../../lib/utils";
+import { useCounterAnimation } from "../../hooks/useCounterAnimation";
 
 interface StatCardProps {
   title: string;
@@ -19,6 +20,8 @@ export function StatCard({
   className,
   valueClassName
 }: StatCardProps) {
+  const animatedValue = useCounterAnimation(value);
+  
   return (
     <Card className={cn("transition-all duration-200", className)}>
       <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
@@ -27,7 +30,7 @@ export function StatCard({
       </CardHeader>
       <CardContent>
         <div className={cn("text-2xl font-bold", valueClassName)}>
-          {new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(value)}
+          {new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(animatedValue)}
         </div>
         <p className="text-xs text-muted-foreground mt-1">
           {description}

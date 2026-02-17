@@ -31,7 +31,7 @@ export default function MainLayout() {
 
       {/* Sidebar */}
       <aside className={cn(
-        "fixed inset-y-0 left-0 z-50 w-64 bg-card shadow-lg transform transition-transform duration-200 ease-in-out md:translate-x-0 md:static md:inset-auto",
+        "fixed inset-y-0 left-0 z-50 w-64 bg-card shadow-lg transform transition-transform duration-200 ease-in-out",
         isSidebarOpen ? "translate-x-0" : "-translate-x-full"
       )}>
         <div className="flex flex-col h-full">
@@ -101,8 +101,8 @@ export default function MainLayout() {
 
       {/* Main Content */}
       <div className="flex-1 flex flex-col min-h-screen">
-        {/* Mobile Header */}
-        <header className="md:hidden flex items-center justify-between h-16 px-4 bg-card shadow-sm border-b border-border">
+        {/* Header with Hamburger Menu */}
+        <header className="flex items-center justify-between h-16 px-4 bg-card shadow-sm border-b border-border">
           <div className="flex items-center">
             <button
               onClick={() => setIsSidebarOpen(true)}
