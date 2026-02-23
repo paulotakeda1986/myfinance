@@ -91,6 +91,8 @@ namespace MyFinance.API.Controllers
                 var carteiras = await _uow.Carteiras.GetAllAsync();
                 var cartoes = await _uow.CartoesCredito.FindAsync(c => c.UsuarioId == userId);
                 var faturas = await _uow.FaturasCartaoCredito.FindAsync(f => f.UsuarioId == userId);
+                var transferencias = await _uow.Transferencias.FindAsync(t => t.UsuarioId == userId);
+                var tiposTransferencia = await _uow.TiposTransferencia.GetAllAsync();
 
                 var response = new List<LancamentoResponse>();
 
@@ -98,7 +100,15 @@ namespace MyFinance.API.Controllers
                 foreach (var l in lancamentos)
                 {
                     string? catNome = null;
-                    if (l.CategoriaReceitaId.HasValue) catNome = categoriasReceita.FirstOrDefault(c => c.Id == l.CategoriaReceitaId)?.Nome;
+                    if (l.TransferenciaId.HasValue)
+                    {
+                        var transferencia = transferencias.FirstOrDefault(t => t.Id == l.TransferenciaId);
+                        if (transferencia != null)
+                        {
+                            catNome = tiposTransferencia.FirstOrDefault(tt => tt.Id == transferencia.TipoTransferenciaId)?.Nome;
+                        }
+                    }
+                    else if (l.CategoriaReceitaId.HasValue) catNome = categoriasReceita.FirstOrDefault(c => c.Id == l.CategoriaReceitaId)?.Nome;
                     else if (l.CategoriaDespesaId.HasValue) catNome = categoriasDespesa.FirstOrDefault(c => c.Id == l.CategoriaDespesaId)?.Nome;
 
                     string? cartaoNome = null;
@@ -143,7 +153,15 @@ namespace MyFinance.API.Controllers
                     if (parent == null) continue;
 
                     string? catNome = null;
-                    if (parent.CategoriaReceitaId.HasValue) catNome = categoriasReceita.FirstOrDefault(c => c.Id == parent.CategoriaReceitaId)?.Nome;
+                    if (parent.TransferenciaId.HasValue)
+                    {
+                        var transferencia = transferencias.FirstOrDefault(t => t.Id == parent.TransferenciaId);
+                        if (transferencia != null)
+                        {
+                            catNome = tiposTransferencia.FirstOrDefault(tt => tt.Id == transferencia.TipoTransferenciaId)?.Nome;
+                        }
+                    }
+                    else if (parent.CategoriaReceitaId.HasValue) catNome = categoriasReceita.FirstOrDefault(c => c.Id == parent.CategoriaReceitaId)?.Nome;
                     else if (parent.CategoriaDespesaId.HasValue) catNome = categoriasDespesa.FirstOrDefault(c => c.Id == parent.CategoriaDespesaId)?.Nome;
 
                     string? cartaoNome = null;
@@ -219,11 +237,41 @@ namespace MyFinance.API.Controllers
                     lancamento.CarteiraId = null; // Card transactions don't point to wallet directly
                 }
 
-                // Map Categories
-                if (request.TipoLancamentoId == 1) // Receita
-                    lancamento.CategoriaReceitaId = request.CategoriaId;
+                // Map Categories or Transferencia
+                if (request.TipoTransferenciaId.HasValue)
+                {
+                    // Create a new TransferenciaFinanceira
+                    var transferencia = new TransferenciaFinanceira
+                    {
+                        TipoTransferenciaId = request.TipoTransferenciaId.Value,
+                        DataTransferencia = request.DataLancamento,
+                        Descricao = request.Descricao,
+                        Valor = request.Valor,
+                        UsuarioId = userId,
+                        CriadoEm = DateTime.UtcNow
+                    };
+                    
+                    if (request.TipoLancamentoId == 1) // Receita -> Destiny
+                    {
+                        transferencia.CarteiraDestinoId = request.CarteiraId;
+                    }
+                    else // Despesa -> Origin
+                    {
+                        transferencia.CarteiraOrigemId = request.CarteiraId;
+                    }
+
+                    await _uow.Transferencias.AddAsync(transferencia);
+                    await _uow.CommitAsync();
+
+                    lancamento.TransferenciaId = transferencia.Id;
+                }
                 else
-                    lancamento.CategoriaDespesaId = request.CategoriaId;
+                {
+                    if (request.TipoLancamentoId == 1) // Receita
+                        lancamento.CategoriaReceitaId = request.CategoriaId;
+                    else
+                        lancamento.CategoriaDespesaId = request.CategoriaId;
+                }
 
                 if (request.Parcelado)
                 {

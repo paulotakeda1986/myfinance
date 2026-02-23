@@ -30,6 +30,7 @@ export interface CreateLancamentoRequest {
   categoriaId?: number;
   carteiraId?: number;
   cartaoCreditoId?: number;
+  tipoTransferenciaId?: number;
   parcelado: boolean;
   totalParcelas?: number;
   modoParcelamento?: number; // 1: Dividir, 2: Repetir

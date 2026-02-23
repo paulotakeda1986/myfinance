@@ -11,6 +11,11 @@ export interface TipoCarteira {
   nome: string;
 }
 
+export interface TipoTransferencia {
+  id: number;
+  nome: string;
+}
+
 export const domainService = {
   getBancos: async () => {
     const response = await api.get<Banco[]>("/dominio/bancos");
@@ -18,6 +23,10 @@ export const domainService = {
   },
   getTiposCarteira: async () => {
     const response = await api.get<TipoCarteira[]>("/dominio/tipos-carteira");
+    return response.data;
+  },
+  getTiposTransferencia: async () => {
+    const response = await api.get<TipoTransferencia[]>("/dominio/tipos-transferencia");
     return response.data;
   },
 };

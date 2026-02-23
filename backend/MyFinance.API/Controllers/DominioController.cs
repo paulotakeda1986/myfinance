@@ -37,5 +37,12 @@ namespace MyFinance.API.Controllers
             var tipos = await _uow.TiposLancamento.GetAllAsync();
             return Ok(tipos);
         }
+
+        [HttpGet("tipos-transferencia")]
+        public async Task<ActionResult<IEnumerable<TipoTransferenciaFinanceira>>> GetTiposTransferencia()
+        {
+            var tipos = await _uow.TiposTransferencia.GetAllAsync();
+            return Ok(tipos);
+        }
     }
 }

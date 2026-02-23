@@ -10,6 +10,7 @@ namespace MyFinance.API.DTOs.Lancamento
         long? CategoriaId, // Receita or Despesa ID
         long? CarteiraId,
         long? CartaoCreditoId, // New field
+        long? TipoTransferenciaId = null, // Added for transfers
         bool Parcelado = false,
         int? TotalParcelas = null,
         int? ModoParcelamento = 1, // 1: Dividir, 2: Repetir

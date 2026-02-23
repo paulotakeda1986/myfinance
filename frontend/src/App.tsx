@@ -10,6 +10,7 @@ import Transactions from './pages/Transactions';
 import Categories from './pages/Categories';
 import CreditCards from './pages/CreditCards';
 import Invoices from './pages/Invoices';
+import Transfers from './pages/Transfers';
 import AuthLayout from './components/layout/AuthLayout';
 import MainLayout from './components/layout/MainLayout';
 
@@ -61,6 +62,7 @@ function AppRoutes() {
         <Route path="/faturas" element={<Invoices />} />
         <Route path="/lancamentos" element={<Transactions />} />
         <Route path="/categorias" element={<Categories />} />
+        <Route path="/transferencias" element={<Transfers />} />
       </Route>
 
       {/* Wildcard */}

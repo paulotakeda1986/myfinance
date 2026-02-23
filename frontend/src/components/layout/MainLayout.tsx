@@ -1,6 +1,6 @@
 import { Outlet, Link, useLocation } from 'react-router-dom';
 import { useAuth } from '../../context/AuthContext';
-import { LayoutDashboard, Wallet, Receipt, ArrowLeftRight, CreditCard, LogOut, Menu, Sun, Moon, X } from 'lucide-react';
+import { LayoutDashboard, Wallet, Receipt, ArrowLeftRight, ArrowRightLeft, CreditCard, LogOut, Menu, Sun, Moon, X } from 'lucide-react';
 import { useState } from 'react';
 import { cn } from '../../lib/utils';
 import { useTheme } from '../../context/ThemeContext';
@@ -17,6 +17,7 @@ export default function MainLayout() {
     { name: 'Cartões', href: '/cartoes', icon: CreditCard },
     { name: 'Lançamentos', href: '/lancamentos', icon: Receipt },
     { name: 'Categorias', href: '/categorias', icon: ArrowLeftRight },
+    { name: 'Transferências', href: '/transferencias', icon: ArrowRightLeft },
   ];
 
   return (
